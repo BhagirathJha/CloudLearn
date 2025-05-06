@@ -28,7 +28,8 @@ stages:
 
   - name: Deploy to S3
     env:
-      AWS_ACCESS_KEY_ID: AKIART44JMPD4CLGBF7K
+      
+      AWS_SECRET_ACCESS_KEY: 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
       AWS_REGION: ap-south-1
     run: |
       echo "Deploying to S3..."
