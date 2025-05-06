@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Security Best Practices - CloudLearn</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auto-theme">
+  <div class="flex flex-col min-h-screen">
+    <header class="header">
+      <div class="container flex h-16 items-center justify-between px-4 md:px-6">
+        <a href="../index.html" class="flex items-center gap-2 font-semibold">
+          <i class="fa-solid fa-cloud text-primary"></i>
+          <span>CloudLearn</span>
+        </a>
+        <div class="hidden md:flex gap-6">
+          <a href="../providers.html" class="nav-link">Providers</a>
+          <a href="../courses.html" class="nav-link">Courses</a>
+          <a href="../resources.html" class="nav-link">Resources</a>
+          <a href="../about.html" class="nav-link">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:block search-wrapper">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="search" id="search-input" placeholder="Search..." class="input input-search w-full lg:w-[300px]">
+            <div id="search-results" class="search-results hidden"></div>
+          </div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+          <button id="mobile-menu-toggle" class="md:hidden btn-icon" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="../sign-in.html" class="btn btn-primary">Sign In</a>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="container px-4 py-4">
+          <nav class="flex flex-col gap-4">
+            <a href="../providers.html" class="nav-link">Providers</a>
+            <a href="../courses.html" class="nav-link">Courses</a>
+            <a href="../resources.html" class="nav-link">Resources</a>
+            <a href="../about.html" class="nav-link">About</a>
+          </nav>
+          <div class="mt-4">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-search search-icon"></i>
+              <input type="search" placeholder="Search..." class="input input-search w-full">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="section bg-gradient-blue py-12 md:py-16">
+        <div class="container px-4 md:px-6">
+          <div class="mb-8 text-white">
+            <a href="../resources.html">
+              <button class="btn btn-ghost gap-1 pl-0 mb-4 text-white">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Resources
+              </button>
+            </a>
+            <h1 class="text-3xl font-bold tracking-tighter md:text-4xl mb-4">Cloud Security Best Practices</h1>
+            <p class="max-w-[700px] opacity-90">
+              Comprehensive guides and best practices for securing your cloud environments across all major providers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container px-4 py-12 md:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Main Content -->
+          <div class="lg:col-span-2">
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">Cloud Security Fundamentals</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-6">
+                  <!-- Shared Responsibility Model -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">The Shared Responsibility Model</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Understanding the division of security responsibilities between cloud providers and customers is fundamental to cloud security.
+                      </p>
+                      <img src="https://d1.awsstatic.com/security-center/Shared_Responsibility_Model_V2.59d1eccec334b366627e9295b304202faf7b899b.jpg" alt="Shared Responsibility Model" class="w-full rounded-md mb-4">
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Key Points:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li>Cloud providers are responsible for security <strong>of</strong> the cloud (infrastructure)</li>
+                          <li>Customers are responsible for security <strong>in</strong> the cloud (data, applications, etc.)</li>
+                          <li>Responsibilities vary by service model (IaaS, PaaS, SaaS)</li>
+                          <li>Clear understanding prevents security gaps</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://aws.amazon.com/compliance/shared-responsibility-model/" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          Learn more about the Shared Responsibility Model
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Defense in Depth -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Defense in Depth Strategy</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Implementing multiple layers of security controls throughout your cloud environment.
+                      </p>
+                      <img src="https://img.freepik.com/free-vector/digital-privacy-personal-data-protection-isometric-composition_1284-54311.jpg?t=st=1746342321~exp=1746345921~hmac=c01d1ff03d56e8edc1378c19307728e5c9606bd4643a18fd7cb9d31d58144e06&w=900" alt="Defense in Depth" class="w-full rounded-md mb-4">
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Security Layers:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li>Physical security (managed by cloud provider)</li>
+                          <li>Identity and access management</li>
+                          <li>Perimeter security (firewalls, DDoS protection)</li>
+                          <li>Network security (VPCs, subnets, NACLs)</li>
+                          <li>Compute security (instance hardening, patching)</li>
+                          <li>Application security (secure coding, testing)</li>
+                          <li>Data security (encryption, access controls)</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://learn.microsoft.com/en-us/azure/security/fundamentals/defense-in-depth" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          Learn more about Defense in Depth
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">Identity and Access Management</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-6">
+                  <!-- IAM Best Practices -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">IAM Best Practices</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Securing access to your cloud resources through proper identity and access management.
+                      </p>
+                      <div class="space-y-4">
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">1. Implement the Principle of Least Privilege</h4>
+                          <p class="text-sm">Grant only the permissions necessary to perform a task. Avoid overly permissive policies.</p>
+                        </div>
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">2. Use Strong Password Policies</h4>
+                          <p class="text-sm">Enforce complex passwords, regular rotation, and prevent password reuse.</p>
+                        </div>
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">3. Enable Multi-Factor Authentication (MFA)</h4>
+                          <p class="text-sm">Require MFA for all users, especially for privileged accounts and console access.</p>
+                        </div>
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">4. Use Role-Based Access Control</h4>
+                          <p class="text-sm">Assign permissions to roles, then assign roles to users or groups.</p>
+                        </div>
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">5. Regularly Review Access</h4>
+                          <p class="text-sm">Conduct periodic access reviews to remove unnecessary permissions and accounts.</p>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://cloud.google.com/iam/docs/best-practices-for-using-cloud-iam" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          Google Cloud IAM Best Practices
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Federated Identity -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Federated Identity Management</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Integrating your existing identity provider with cloud services for centralized authentication.
+                      </p>
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Benefits:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li>Single sign-on (SSO) across cloud services</li>
+                          <li>Centralized user management</li>
+                          <li>Consistent security policies</li>
+                          <li>Reduced administrative overhead</li>
+                          <li>Improved user experience</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <p class="text-sm text-muted-foreground mb-2">Common federation protocols:</p>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                          <li>SAML 2.0</li>
+                          <li>OpenID Connect</li>
+                          <li>OAuth 2.0</li>
+                          <li>WS-Federation</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://learn.microsoft.com/en-us/azure/active-directory/hybrid/whatis-fed" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          Learn more about Federated Identity
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">Data Protection</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-6">
+                  <!-- Encryption -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Data Encryption Best Practices</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Protecting your data through encryption at rest and in transit.
+                      </p>
+                      <div class="space-y-4">
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">Encryption at Rest</h4>
+                          <p class="text-sm">Encrypt data stored in cloud storage, databases, and disk volumes. Use provider-managed keys (e.g., AWS KMS, Azure Key Vault) or bring your own keys (BYOK).</p>
+                        </div>
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">Encryption in Transit</h4>
+                          <p class="text-sm">Use TLS/SSL for all data transmissions. Configure minimum TLS versions (TLS 1.2+) and strong cipher suites.</p>
+                        </div>
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">Key Management</h4>
+                          <p class="text-sm">Implement proper key rotation, access controls, and auditing for encryption keys. Consider hardware security modules (HSMs) for critical workloads.</p>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://aws.amazon.com/blogs/security/tag/encryption/" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          AWS Encryption Best Practices
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Data Classification -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Data Classification and Handling</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Categorizing data based on sensitivity and implementing appropriate controls.
+                      </p>
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Common Classification Levels:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li><strong>Public:</strong> Data that can be freely disclosed</li>
+                          <li><strong>Internal:</strong> Data for internal use only</li>
+                          <li><strong>Confidential:</strong> Sensitive data with restricted access</li>
+                          <li><strong>Restricted:</strong> Highly sensitive data with strict controls</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <p class="text-sm text-muted-foreground mb-2">Implementation steps:</p>
+                        <ol class="list-decimal pl-5 space-y-1 text-sm">
+                          <li>Inventory your data assets</li>
+                          <li>Define classification levels and criteria</li>
+                          <li>Classify data according to sensitivity</li>
+                          <li>Implement controls based on classification</li>
+                          <li>Train users on data handling procedures</li>
+                          <li>Monitor and audit compliance</li>
+                        </ol>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://cloud.google.com/dlp" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          Google Cloud Data Loss Prevention
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">Network Security</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-6">
+                  <!-- Network Segmentation -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Network Segmentation</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Dividing your cloud network into isolated segments to limit the blast radius of potential breaches.
+                      </p>
+                      <img src="https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/dmz/images/dmz-private.png" alt="Network Segmentation" class="w-full rounded-md mb-4">
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Best Practices:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li>Create separate VPCs/VNets for different environments (dev, test, prod)</li>
+                          <li>Use subnets to group related resources</li>
+                          <li>Implement network ACLs and security groups</li>
+                          <li>Use private endpoints for service connections</li>
+                          <li>Implement transit gateways or hub-spoke models for complex networks</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://learn.microsoft.com/en-us/azure/security/fundamentals/network-best-practices" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          Azure Network Security Best Practices
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- DDoS Protection -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">DDoS Protection</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Safeguarding your applications against distributed denial-of-service attacks.
+                      </p>
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Protection Strategies:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li>Use cloud provider DDoS protection services (AWS Shield, Azure DDoS Protection)</li>
+                          <li>Implement content delivery networks (CDNs)</li>
+                          <li>Design for scalability to absorb traffic spikes</li>
+                          <li>Configure rate limiting and throttling</li>
+                          <li>Use web application firewalls (WAFs)</li>
+                          <li>Develop incident response plans for DDoS events</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://aws.amazon.com/shield/" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          AWS Shield DDoS Protection
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div>
+            <div class="card mb-6 sticky top-20">
+              <div class="card-header">
+                <h2 class="card-title">Security Resources</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-4">
+                  <h3 class="font-semibold">Security Frameworks</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-shield-alt text-primary mt-1"></i>
+                      <div>
+                        <a href="https://www.cisecurity.org/controls/cis-controls-list" target="_blank" class="font-medium hover:text-primary">CIS Controls</a>
+                        <p class="text-sm text-muted-foreground">Center for Internet Security best practices</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-shield-alt text-primary mt-1"></i>
+                      <div>
+                        <a href="https://www.nist.gov/cyberframework" target="_blank" class="font-medium hover:text-primary">NIST Cybersecurity Framework</a>
+                        <p class="text-sm text-muted-foreground">Standards, guidelines, and best practices</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-shield-alt text-primary mt-1"></i>
+                      <div>
+                        <a href="https://cloudsecurityalliance.org/research/cloud-controls-matrix/" target="_blank" class="font-medium hover:text-primary">CSA Cloud Controls Matrix</a>
+                        <p class="text-sm text-muted-foreground">Cloud-specific security controls framework</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="border-t my-4"></div>
+
+                  <h3 class="font-semibold">Compliance Standards</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check-circle text-primary mt-1"></i>
+                      <div>
+                        <a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank" class="font-medium hover:text-primary">ISO 27001/27017/27018</a>
+                        <p class="text-sm text-muted-foreground">Information security management standards</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check-circle text-primary mt-1"></i>
+                      <div>
+                        <a href="https://www.pcisecuritystandards.org/" target="_blank" class="font-medium hover:text-primary">PCI DSS</a>
+                        <p class="text-sm text-muted-foreground">Payment card industry data security standard</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check-circle text-primary mt-1"></i>
+                      <div>
+                        <a href="https://www.hhs.gov/hipaa/index.html" target="_blank" class="font-medium hover:text-primary">HIPAA</a>
+                        <p class="text-sm text-muted-foreground">Health Insurance Portability and Accountability Act</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check-circle text-primary mt-1"></i>
+                      <div>
+                        <a href="https://gdpr.eu/" target="_blank" class="font-medium hover:text-primary">GDPR</a>
+                        <p class="text-sm text-muted-foreground">General Data Protection Regulation</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="border-t my-4"></div>
+
+                  <h3 class="font-semibold">Security Tools</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-tools text-primary mt-1"></i>
+                      <div>
+                        <a href="https://www.tenable.com/" target="_blank" class="font-medium hover:text-primary">Tenable</a>
+                        <p class="text-sm text-muted-foreground">Vulnerability management</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-tools text-primary mt-1"></i>
+                      <div>
+                        <a href="https://www.aquasec.com/" target="_blank" class="font-medium hover:text-primary">Aqua Security</a>
+                        <p class="text-sm text-muted-foreground">Container and cloud security</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-tools text-primary mt-1"></i>
+                      <div>
+                        <a href="https://www.prismacloud.io/" target="_blank" class="font-medium hover:text-primary">Prisma Cloud</a>
+                        <p class="text-sm text-muted-foreground">Cloud security posture management</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container flex flex-col gap-6 py-8 md:py-12 px-4 md:px-6">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <a href="../index.html" class="flex items-center gap-2 font-semibold">
+            <i class="fa-solid fa-cloud text-primary"></i>
+            <span>CloudLearn</span>
+          </a>
+          <nav class="flex gap-4 md:gap-6 flex-wrap justify-center">
+            <a href="../providers.html" class="nav-link">Providers</a>
+            <a href="../courses.html" class="nav-link">Courses</a>
+            <a href="../resources.html" class="nav-link">Resources</a>
+            <a href="../about.html" class="nav-link">About</a>
+            <a href="../contact.html" class="nav-link">Contact</a>
+          </nav>
+        </div>
+        <div class="text-center md:text-left text-sm text-muted-foreground">
+          © <span id="current-year"></span> CloudLearn. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../scripts.js"></script>
+</body>
+</html>

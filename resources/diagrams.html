@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Architecture Diagrams - CloudLearn</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auto-theme">
+  <div class="flex flex-col min-h-screen">
+    <header class="header">
+      <div class="container flex h-16 items-center justify-between px-4 md:px-6">
+        <a href="../index.html" class="flex items-center gap-2 font-semibold">
+          <i class="fa-solid fa-cloud text-primary"></i>
+          <span>CloudLearn</span>
+        </a>
+        <div class="hidden md:flex gap-6">
+          <a href="../providers.html" class="nav-link">Providers</a>
+          <a href="../courses.html" class="nav-link">Courses</a>
+          <a href="../resources.html" class="nav-link">Resources</a>
+          <a href="../about.html" class="nav-link">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:block search-wrapper">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="search" id="search-input" placeholder="Search..." class="input input-search w-full lg:w-[300px]">
+            <div id="search-results" class="search-results hidden"></div>
+          </div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun"></i  class="theme-toggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+          <button id="mobile-menu-toggle" class="md:hidden btn-icon" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="../sign-in.html" class="btn btn-primary">Sign In</a>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="container px-4 py-4">
+          <nav class="flex flex-col gap-4">
+            <a href="../providers.html" class="nav-link">Providers</a>
+            <a href="../courses.html" class="nav-link">Courses</a>
+            <a href="../resources.html" class="nav-link">Resources</a>
+            <a href="../about.html" class="nav-link">About</a>
+          </nav>
+          <div class="mt-4">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-search search-icon"></i>
+              <input type="search" placeholder="Search..." class="input input-search w-full">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="section bg-gradient-blue py-12 md:py-16">
+        <div class="container px-4 md:px-6">
+          <div class="mb-8 text-white">
+            <a href="../resources.html">
+              <button class="btn btn-ghost gap-1 pl-0 mb-4 text-white">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Resources
+              </button>
+            </a>
+            <h1 class="text-3xl font-bold tracking-tighter md:text-4xl mb-4">Cloud Architecture Diagrams</h1>
+            <p class="max-w-[700px] opacity-90">
+              Visual representations of cloud architectures and service relationships to help you understand and design cloud solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container px-4 py-12 md:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Main Content -->
+          <div class="lg:col-span-2">
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">AWS Architecture Diagrams</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-6">
+                  <!-- AWS VPC Architecture -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">AWS VPC Architecture with Public and Private Subnets</h3>
+                      <p class="text-muted-foreground mb-4">
+                        This diagram illustrates a standard AWS VPC setup with public and private subnets across multiple availability zones.
+                      </p>
+                      <img src="https://docs.aws.amazon.com/images/vpc/latest/userguide/images/vpc-example-private-subnets.png" alt="AWS VPC Architecture" class="w-full rounded-md mb-4">
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Key Components:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li>Virtual Private Cloud (VPC)</li>
+                          <li>Public and Private Subnets</li>
+                          <li>Internet Gateway</li>
+                          <li>NAT Gateway</li>
+                          <li>Route Tables</li>
+                          <li>Security Groups</li>
+                          <li>Network ACLs</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          Learn more about AWS VPC
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- AWS Three-Tier Web Application -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Three-Tier Web Application on AWS</h3>
+                      <p class="text-muted-foreground mb-4">
+                        A standard three-tier architecture (web, application, database) implemented on AWS services.
+                      </p>
+                      <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*qtoXNNXzBKuVvxFIqCojPg.png" alt="Three-Tier Web Application" class="w-full rounded-md mb-4">
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Key Components:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li>Elastic Load Balancer</li>
+                          <li>EC2 Instances for Web Tier</li>
+                          <li>EC2 Instances for Application Tier</li>
+                          <li>RDS for Database Tier</li>
+                          <li>Auto Scaling Groups</li>
+                          <li>Security Groups</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://aws.amazon.com/architecture/reference-architecture-diagrams/" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          View more AWS reference architectures
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">Azure Architecture Diagrams</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-6">
+                  <!-- Azure Virtual Network -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Azure Virtual Network Architecture</h3>
+                      <p class="text-muted-foreground mb-4">
+                        This diagram shows a typical Azure Virtual Network setup with subnets, network security groups, and gateways.
+                      </p>
+                      <img src="https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/images/hub-spoke.png" alt="Azure Virtual Network" class="w-full rounded-md mb-4">
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Key Components:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li>Virtual Network</li>
+                          <li>Subnets</li>
+                          <li>Network Security Groups</li>
+                          <li>VPN Gateway</li>
+                          <li>ExpressRoute</li>
+                          <li>Azure Firewall</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          Learn more about Azure Hub-Spoke Network Topology
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Azure Web App with SQL Database -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Azure Web App with SQL Database</h3>
+                      <p class="text-muted-foreground mb-4">
+                        A basic web application architecture using Azure App Service and Azure SQL Database.
+                      </p>
+                      <img src="https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/images/basic-web-app.png" alt="Azure Web App with SQL Database" class="w-full rounded-md mb-4">
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Key Components:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li>Azure App Service</li>
+                          <li>Azure SQL Database</li>
+                          <li>Application Insights</li>
+                          <li>Azure CDN</li>
+                          <li>Azure DNS</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/basic-web-app" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          View Azure Web App reference architecture
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">Google Cloud Architecture Diagrams</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-6">
+                  <!-- GCP Network Architecture -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Google Cloud VPC Network Architecture</h3>
+                      <p class="text-muted-foreground mb-4">
+                        This diagram illustrates a typical Google Cloud VPC network setup with subnets and firewall rules.
+                      </p>
+                      <img src="https://cloud.google.com/static/vpc/images/vpc-overview-example.svg" alt="Google Cloud VPC Network" class="w-full rounded-md mb-4">
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Key Components:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li>VPC Network</li>
+                          <li>Subnets</li>
+                          <li>Firewall Rules</li>
+                          <li>Cloud Router</li>
+                          <li>Cloud NAT</li>
+                          <li>VPN Gateway</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://cloud.google.com/vpc/docs/vpc" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          Learn more about Google Cloud VPC
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- GCP Microservices Architecture -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Microservices Architecture on Google Cloud</h3>
+                      <p class="text-muted-foreground mb-4">
+                        A microservices architecture implemented using Google Cloud services like GKE, Cloud Run, and Cloud Functions.
+                      </p>
+                      <img src="https://storage.googleapis.com/gweb-cloudblog-publish/images/example_ms_a_callout.max-1700x1700.png" alt="Microservices on Google Cloud" class="w-full rounded-md mb-4">
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Key Components:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li>Google Kubernetes Engine (GKE)</li>
+                          <li>Cloud Run</li>
+                          <li>Cloud Functions</li>
+                          <li>Cloud Pub/Sub</li>
+                          <li>Cloud Storage</li>
+                          <li>Cloud Firestore</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://cloud.google.com/blog/topics/developers-practitioners/microservices-architecture-google-cloud" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          View Google Cloud microservices reference architecture
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div>
+            <div class="card mb-6 sticky top-20">
+              <div class="card-header">
+                <h2 class="card-title">Diagram Resources</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-4">
+                  <h3 class="font-semibold">Diagram Tools</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-pencil-ruler text-primary mt-1"></i>
+                      <div>
+                        <a href="https://www.lucidchart.com" target="_blank" class="font-medium hover:text-primary">Lucidchart</a>
+                        <p class="text-sm text-muted-foreground">Web-based diagramming tool with cloud architecture templates</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-pencil-ruler text-primary mt-1"></i>
+                      <div>
+                        <a href="https://www.draw.io" target="_blank" class="font-medium hover:text-primary">draw.io</a>
+                        <p class="text-sm text-muted-foreground">Free online diagram software with cloud provider shapes</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-pencil-ruler text-primary mt-1"></i>
+                      <div>
+                        <a href="https://cloudcraft.co" target="_blank" class="font-medium hover:text-primary">Cloudcraft</a>
+                        <p class="text-sm text-muted-foreground">Create professional AWS diagrams with isometric 3D views</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-pencil-ruler text-primary mt-1"></i>
+                      <div>
+                        <a href="https://www.hava.io" target="_blank" class="font-medium hover:text-primary">Hava</a>
+                        <p class="text-sm text-muted-foreground">Automated cloud infrastructure diagrams</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="border-t my-4"></div>
+
+                  <h3 class="font-semibold">Official Architecture Centers</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-link text-primary mt-1"></i>
+                      <div>
+                        <a href="https://aws.amazon.com/architecture/" target="_blank" class="font-medium hover:text-primary">AWS Architecture Center</a>
+                        <p class="text-sm text-muted-foreground">Reference architectures and best practices from AWS</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-link text-primary mt-1"></i>
+                      <div>
+                        <a href="https://learn.microsoft.com/en-us/azure/architecture/" target="_blank" class="font-medium hover:text-primary">Azure Architecture Center</a>
+                        <p class="text-sm text-muted-foreground">Guidance for architecting solutions on Azure</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-link text-primary mt-1"></i>
+                      <div>
+                        <a href="https://cloud.google.com/architecture" target="_blank" class="font-medium hover:text-primary">Google Cloud Architecture Center</a>
+                        <p class="text-sm text-muted-foreground">Reference architectures and guides for Google Cloud</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="border-t my-4"></div>
+
+                  <h3 class="font-semibold">Books & Guides</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-book text-primary mt-1"></i>
+                      <div>
+                        <span class="font-medium">Cloud Architecture Patterns</span>
+                        <p class="text-sm text-muted-foreground">by Bill Wilder</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-book text-primary mt-1"></i>
+                      <div>
+                        <span class="font-medium">AWS: The Complete Reference</span>
+                        <p class="text-sm text-muted-foreground">by James Ray</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-book text-primary mt-1"></i>
+                      <div>
+                        <span class="font-medium">Azure Architecture Best Practices</span>
+                        <p class="text-sm text-muted-foreground">by Microsoft Press</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container flex flex-col gap-6 py-8 md:py-12 px-4 md:px-6">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <a href="../index.html" class="flex items-center gap-2 font-semibold">
+            <i class="fa-solid fa-cloud text-primary"></i>
+            <span>CloudLearn</span>
+          </a>
+          <nav class="flex gap-4 md:gap-6 flex-wrap justify-center">
+            <a href="../providers.html" class="nav-link">Providers</a>
+            <a href="../courses.html" class="nav-link">Courses</a>
+            <a href="../resources.html" class="nav-link">Resources</a>
+            <a href="../about.html" class="nav-link">About</a>
+            <a href="../contact.html" class="nav-link">Contact</a>
+          </nav>
+        </div>
+        <div class="text-center md:text-left text-sm text-muted-foreground">
+          © <span id="current-year"></span> CloudLearn. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../scripts.js"></script>
+</body>
+</html>

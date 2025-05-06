@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - CloudLearn</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auto-theme">
+  <div class="flex flex-col min-h-screen">
+    <header class="header">
+      <div class="container flex h-16 items-center justify-between px-4 md:px-6">
+        <a href="index.html" class="flex items-center gap-2 font-semibold">
+          <i class="fa-solid fa-cloud text-primary"></i>
+          <span>CloudLearn</span>
+        </a>
+        <div class="hidden md:flex gap-6">
+          <a href="providers.html" class="nav-link">Providers</a>
+          <a href="courses.html" class="nav-link">Courses</a>
+          <a href="resources.html" class="nav-link">Resources</a>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:block search-wrapper">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="search" id="search-input" placeholder="Search..." class="input input-search w-full lg:w-[300px]">
+            <div id="search-results" class="search-results hidden"></div>
+          </div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+          <button id="mobile-menu-toggle" class="md:hidden btn-icon" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="sign-in.html" class="btn btn-primary">Sign In</a>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="container px-4 py-4">
+          <nav class="flex flex-col gap-4">
+            <a href="providers.html" class="nav-link">Providers</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="about.html" class="nav-link">About</a>
+          </nav>
+          <div class="mt-4">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-search search-icon"></i>
+              <input type="search" placeholder="Search..." class="input input-search w-full">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="section bg-gradient-blue py-12 md:py-16">
+        <div class="container px-4 md:px-6">
+          <div class="mb-8 text-white">
+            <a href="index.html">
+              <button class="btn btn-ghost gap-1 pl-0 mb-4 text-white">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Home
+              </button>
+            </a>
+            <h1 class="text-3xl font-bold tracking-tighter md:text-4xl mb-4">Contact Us</h1>
+            <p class="max-w-[700px] opacity-90">
+              Have questions or feedback? We'd love to hear from you. Get in touch with our team.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container px-4 py-12 md:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 class="text-2xl font-bold mb-6">Get In Touch</h2>
+            <form id="contact-form" class="space-y-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label for="first-name" class="form-label">First Name</label>
+                  <input type="text" id="first-name" class="form-input" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-group">
+                  <label for="last-name" class="form-label">Last Name</label>
+                  <input type="text" id="last-name" class="form-input" placeholder="Enter your last name" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+              </div>
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" class="form-input" placeholder="Enter subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" class="form-input" rows="5" placeholder="Enter your message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+          
+          <div>
+            <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="bg-primary rounded-full p-3 text-white">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold">Email</h3>
+                  <p class="text-muted-foreground">bhagirathjha60@gmail.com</p>
+                  <p class="text-muted-foreground">support@bhagirathjha60.com</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="bg-primary rounded-full p-3 text-white">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold">Phone</h3>
+                  <p class="text-muted-foreground">+91 8128377340</p>
+                  <p class="text-muted-foreground">Mon-Fri, 9am-5pm IST</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="bg-primary rounded-full p-3 text-white">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold">Location</h3>
+                  <p class="text-muted-foreground">C-184 Dream Residency</p>
+                  <p class="text-muted-foreground">Gujarat, Vadodara 390013</p>
+                </div>
+              </div>
+              
+              <div class="mt-8">
+                <h3 class="font-bold mb-4">Follow Us</h3>
+                <div class="flex gap-4">
+                  <a href="#" class="bg-muted rounded-full p-3 hover:bg-primary hover:text-white transition-colors">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="#" class="bg-muted rounded-full p-3 hover:bg-primary hover:text-white transition-colors">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="#" class="bg-muted rounded-full p-3 hover:bg-primary hover:text-white transition-colors">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="#" class="bg-muted rounded-full p-3 hover:bg-primary hover:text-white transition-colors">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container flex flex-col gap-6 py-8 md:py-12 px-4 md:px-6">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <a href="index.html" class="flex items-center gap-2 font-semibold">
+            <i class="fa-solid fa-cloud text-primary"></i>
+            <span>CloudLearn</span>
+          </a>
+          <nav class="flex gap-4 md:gap-6 flex-wrap justify-center">
+            <a href="providers.html" class="nav-link">Providers</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+        </div>
+        <div class="text-center md:text-left text-sm text-muted-foreground">
+          © <span id="current-year"></span> CloudLearn. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script>
+    // Contact form submission
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // In a real app, you would handle form submission here
+        alert('Thank you for your message! We will get back to you soon.');
+        contactForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>

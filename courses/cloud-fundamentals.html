@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Fundamentals - CloudLearn</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auto-theme">
+  <div class="flex flex-col min-h-screen">
+    <header class="header">
+      <div class="container flex h-16 items-center justify-between px-4 md:px-6">
+        <a href="../index.html" class="flex items-center gap-2 font-semibold">
+          <i class="fa-solid fa-cloud text-primary"></i>
+          <span>CloudLearn</span>
+        </a>
+        <div class="hidden md:flex gap-6">
+          <a href="../providers.html" class="nav-link">Providers</a>
+          <a href="../courses.html" class="nav-link">Courses</a>
+          <a href="../resources.html" class="nav-link">Resources</a>
+          <a href="../about.html" class="nav-link">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:block search-wrapper">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="search" id="search-input" placeholder="Search..." class="input input-search w-full lg:w-[300px]">
+            <div id="search-results" class="search-results hidden"></div>
+          </div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+          <button id="mobile-menu-toggle" class="md:hidden btn-icon" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="../sign-in.html" class="btn btn-primary">Sign In</a>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="container px-4 py-4">
+          <nav class="flex flex-col gap-4">
+            <a href="../providers.html" class="nav-link">Providers</a>
+            <a href="../courses.html" class="nav-link">Courses</a>
+            <a href="../resources.html" class="nav-link">Resources</a>
+            <a href="../about.html" class="nav-link">About</a>
+          </nav>
+          <div class="mt-4">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-search search-icon"></i>
+              <input type="search" placeholder="Search..." class="input input-search w-full">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="section bg-gradient-blue py-12 md:py-16">
+        <div class="container px-4 md:px-6">
+          <div class="mb-8 text-white">
+            <a href="../courses.html">
+              <button class="btn btn-ghost gap-1 pl-0 mb-4 text-white">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Courses
+              </button>
+            </a>
+            <div class="flex flex-wrap gap-2 mb-2">
+              <span class="badge badge-secondary bg-white bg-opacity-20 text-white">Fundamentals</span>
+              <span class="badge badge-secondary bg-white bg-opacity-20 text-white">Multi-Cloud</span>
+            </div>
+            <h1 class="text-3xl font-bold tracking-tighter md:text-4xl mb-4">Cloud Fundamentals</h1>
+            <p class="max-w-[700px] opacity-90">
+              Learn the core concepts of cloud computing applicable to all providers. This course provides a solid foundation for your cloud journey.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container px-4 py-12 md:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Main Content -->
+          <div class="lg:col-span-2">
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">Course Overview</h2>
+              </div>
+              <div class="card-content">
+                <p class="mb-4">
+                  This comprehensive course introduces you to the fundamental concepts of cloud computing that apply across all major cloud service providers. Whether you're new to the cloud or looking to formalize your knowledge, this course provides the perfect foundation.
+                </p>
+                <p class="mb-4">
+                  You'll learn about the core cloud service models (IaaS, PaaS, SaaS), deployment models (public, private, hybrid), and essential concepts like virtualization, containerization, and serverless computing. The course also covers cloud security basics, networking, storage, and cost management principles.
+                </p>
+                <p>
+                  By the end of this course, you'll have a solid understanding of cloud computing fundamentals and be prepared to dive deeper into specific cloud platforms.
+                </p>
+              </div>
+            </div>
+
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">Course Curriculum</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-4">
+                  <!-- Module 1 -->
+                  <div class="border rounded-md overflow-hidden">
+                    <div class="bg-muted p-4 flex justify-between items-center cursor-pointer">
+                      <h3 class="font-semibold">Module 1: Introduction to Cloud Computing</h3>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="p-4 border-t">
+                      <ul class="space-y-2">
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-video text-primary"></i>
+                          <span>What is Cloud Computing?</span>
+                          <span class="ml-auto text-sm text-muted-foreground">25 min</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-video text-primary"></i>
+                          <span>History and Evolution of Cloud Computing</span>
+                          <span class="ml-auto text-sm text-muted-foreground">30 min</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-file-alt text-primary"></i>
+                          <span>Cloud Service Models: IaaS, PaaS, SaaS</span>
+                          <span class="ml-auto text-sm text-muted-foreground">Reading</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-file-alt text-primary"></i>
+                          <span>Cloud Deployment Models: Public, Private, Hybrid</span>
+                          <span class="ml-auto text-sm text-muted-foreground">Reading</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-tasks text-primary"></i>
+                          <span>Module 1 Quiz</span>
+                          <span class="ml-auto text-sm text-muted-foreground">10 questions</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Module 2 -->
+                  <div class="border rounded-md overflow-hidden">
+                    <div class="bg-muted p-4 flex justify-between items-center cursor-pointer">
+                      <h3 class="font-semibold">Module 2: Cloud Architecture Fundamentals</h3>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="p-4 border-t">
+                      <ul class="space-y-2">
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-video text-primary"></i>
+                          <span>Virtualization and Hypervisors</span>
+                          <span class="ml-auto text-sm text-muted-foreground">35 min</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-video text-primary"></i>
+                          <span>Compute Resources in the Cloud</span>
+                          <span class="ml-auto text-sm text-muted-foreground">40 min</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-file-alt text-primary"></i>
+                          <span>Storage Solutions in the Cloud</span>
+                          <span class="ml-auto text-sm text-muted-foreground">Reading</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-file-alt text-primary"></i>
+                          <span>Networking in Cloud Environments</span>
+                          <span class="ml-auto text-sm text-muted-foreground">Reading</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-tasks text-primary"></i>
+                          <span>Module 2 Quiz</span>
+                          <span class="ml-auto text-sm text-muted-foreground">15 questions</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Module 3 -->
+                  <div class="border rounded-md overflow-hidden">
+                    <div class="bg-muted p-4 flex justify-between items-center cursor-pointer">
+                      <h3 class="font-semibold">Module 3: Cloud Security and Compliance</h3>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="p-4 border-t">
+                      <ul class="space-y-2">
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-video text-primary"></i>
+                          <span>Shared Responsibility Model</span>
+                          <span class="ml-auto text-sm text-muted-foreground">30 min</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-video text-primary"></i>
+                          <span>Identity and Access Management</span>
+                          <span class="ml-auto text-sm text-muted-foreground">45 min</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-file-alt text-primary"></i>
+                          <span>Data Protection in the Cloud</span>
+                          <span class="ml-auto text-sm text-muted-foreground">Reading</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-file-alt text-primary"></i>
+                          <span>Compliance and Governance</span>
+                          <span class="ml-auto text-sm text-muted-foreground">Reading</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-tasks text-primary"></i>
+                          <span>Module 3 Quiz</span>
+                          <span class="ml-auto text-sm text-muted-foreground">12 questions</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Module 4 -->
+                  <div class="border rounded-md overflow-hidden">
+                    <div class="bg-muted p-4 flex justify-between items-center cursor-pointer">
+                      <h3 class="font-semibold">Module 4: Cloud Economics and Management</h3>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="p-4 border-t">
+                      <ul class="space-y-2">
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-video text-primary"></i>
+                          <span>Cloud Pricing Models</span>
+                          <span class="ml-auto text-sm text-muted-foreground">35 min</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-video text-primary"></i>
+                          <span>Cost Optimization Strategies</span>
+                          <span class="ml-auto text-sm text-muted-foreground">40 min</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-file-alt text-primary"></i>
+                          <span>Resource Monitoring and Management</span>
+                          <span class="ml-auto text-sm text-muted-foreground">Reading</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-file-alt text-primary"></i>
+                          <span>Cloud Service Level Agreements</span>
+                          <span class="ml-auto text-sm text-muted-foreground">Reading</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-tasks text-primary"></i>
+                          <span>Module 4 Quiz</span>
+                          <span class="ml-auto text-sm text-muted-foreground">15 questions</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Module 5 -->
+                  <div class="border rounded-md overflow-hidden">
+                    <div class="bg-muted p-4 flex justify-between items-center cursor-pointer">
+                      <h3 class="font-semibold">Module 5: Cloud Provider Overview</h3>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="p-4 border-t">
+                      <ul class="space-y-2">
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-video text-primary"></i>
+                          <span>AWS Core Services Overview</span>
+                          <span class="ml-auto text-sm text-muted-foreground">45 min</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-video text-primary"></i>
+                          <span>Azure Core Services Overview</span>
+                          <span class="ml-auto text-sm text-muted-foreground">45 min</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-video text-primary"></i>
+                          <span>Google Cloud Core Services Overview</span>
+                          <span class="ml-auto text-sm text-muted-foreground">45 min</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-file-alt text-primary"></i>
+                          <span>Comparing Cloud Providers</span>
+                          <span class="ml-auto text-sm text-muted-foreground">Reading</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-tasks text-primary"></i>
+                          <span>Module 5 Quiz</span>
+                          <span class="ml-auto text-sm text-muted-foreground">20 questions</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Final Assessment -->
+                  <div class="border rounded-md overflow-hidden">
+                    <div class="bg-muted p-4 flex justify-between items-center cursor-pointer">
+                      <h3 class="font-semibold">Final Assessment</h3>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="p-4 border-t">
+                      <ul class="space-y-2">
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-tasks text-primary"></i>
+                          <span>Comprehensive Final Exam</span>
+                          <span class="ml-auto text-sm text-muted-foreground">50 questions</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <i class="fa-solid fa-project-diagram text-primary"></i>
+                          <span>Capstone Project: Cloud Architecture Design</span>
+                          <span class="ml-auto text-sm text-muted-foreground">Project</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">Study Materials</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-4">
+                  <h3 class="font-semibold">Required Reading</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-book text-primary mt-1"></i>
+                      <div>
+                        <span class="font-medium">Cloud Computing: Concepts, Technology & Architecture</span>
+                        <p class="text-sm text-muted-foreground">by Thomas Erl, Ricardo Puttini, Zaigham Mahmood</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-book text-primary mt-1"></i>
+                      <div>
+                        <span class="font-medium">The Cloud Adoption Playbook</span>
+                        <p class="text-sm text-muted-foreground">by Moe Abdula, et al.</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-file-pdf text-primary mt-1"></i>
+                      <div>
+                        <span class="font-medium">NIST Definition of Cloud Computing (SP 800-145)</span>
+                        <p class="text-sm text-muted-foreground">National Institute of Standards and Technology</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <h3 class="font-semibold pt-4">Supplementary Resources</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-link text-primary mt-1"></i>
+                      <div>
+                        <span class="font-medium">AWS Cloud Essentials</span>
+                        <p class="text-sm text-muted-foreground">Free online training from AWS</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-link text-primary mt-1"></i>
+                      <div>
+                        <span class="font-medium">Microsoft Azure Fundamentals</span>
+                        <p class="text-sm text-muted-foreground">Free online training from Microsoft</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-link text-primary mt-1"></i>
+                      <div>
+                        <span class="font-medium">Google Cloud Basics</span>
+                        <p class="text-sm text-muted-foreground">Free online training from Google</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-video text-primary mt-1"></i>
+                      <div>
+                        <span class="font-medium">Cloud Computing Explained</span>
+                        <p class="text-sm text-muted-foreground">Video series on cloud fundamentals</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <h3 class="font-semibold pt-4">Practice Labs</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-flask text-primary mt-1"></i>
+                      <div>
+                        <span class="font-medium">Virtual Machine Deployment Lab</span>
+                        <p class="text-sm text-muted-foreground">Hands-on practice with cloud VMs</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-flask text-primary mt-1"></i>
+                      <div>
+                        <span class="font-medium">Cloud Storage Configuration Lab</span>
+                        <p class="text-sm text-muted-foreground">Working with cloud storage services</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-flask text-primary mt-1"></i>
+                      <div>
+                        <span class="font-medium">Cloud Networking Lab</span>
+                        <p class="text-sm text-muted-foreground">Setting up virtual networks in the cloud</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div>
+            <div class="card mb-6 sticky top-20">
+              <div class="card-content p-6">
+                <div class="text-center mb-6">
+                  <div class="text-3xl font-bold">$199</div>
+                  <div class="text-sm text-muted-foreground">or included with subscription</div>
+                </div>
+                <button class="btn btn-primary w-full mb-4">Enroll Now</button>
+                <button class="btn btn-outline w-full">Add to Wishlist</button>
+
+                <div class="border-t my-6"></div>
+
+                <div class="space-y-4">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-clock text-primary"></i>
+                    <div>
+                      <div class="text-sm font-medium">Duration</div>
+                      <div class="text-sm text-muted-foreground">4 weeks (40 hours)</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-signal text-primary"></i>
+                    <div>
+                      <div class="text-sm font-medium">Level</div>
+                      <div class="text-sm text-muted-foreground">Beginner</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-users text-primary"></i>
+                    <div>
+                      <div class="text-sm font-medium">Enrolled</div>
+                      <div class="text-sm text-muted-foreground">5,234 students</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-globe text-primary"></i>
+                    <div>
+                      <div class="text-sm font-medium">Language</div>
+                      <div class="text-sm text-muted-foreground">English</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-certificate text-primary"></i>
+                    <div>
+                      <div class="text-sm font-medium">Certificate</div>
+                      <div class="text-sm text-muted-foreground">Upon completion</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="border-t my-6"></div>
+
+                <div class="space-y-2">
+                  <h3 class="font-semibold">Instructors</h3>
+                  <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-blue flex items-center justify-center text-white">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                      <div class="text-sm font-medium">Dr. Sarah Johnson</div>
+                      <div class="text-xs text-muted-foreground">Cloud Computing Professor</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-purple flex items-center justify-center text-white">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                      <div class="text-sm font-medium">Michael Chen</div>
+                      <div class="text-xs text-muted-foreground">AWS Solutions Architect</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container flex flex-col gap-6 py-8 md:py-12 px-4 md:px-6">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <a href="../index.html" class="flex items-center gap-2 font-semibold">
+            <i class="fa-solid fa-cloud text-primary"></i>
+            <span>CloudLearn</span>
+          </a>
+          <nav class="flex gap-4 md:gap-6 flex-wrap justify-center">
+            <a href="../providers.html" class="nav-link">Providers</a>
+            <a href="../courses.html" class="nav-link">Courses</a>
+            <a href="../resources.html" class="nav-link">Resources</a>
+            <a href="../about.html" class="nav-link">About</a>
+            <a href="../contact.html" class="nav-link">Contact</a>
+          </nav>
+        </div>
+        <div class="text-center md:text-left text-sm text-muted-foreground">
+          © <span id="current-year"></span> CloudLearn. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../scripts.js"></script>
+  <script>
+    // Toggle curriculum sections
+    document.querySelectorAll('.bg-muted').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        const icon = header.querySelector('i');
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+      });
+    });
+  </script>
+</body>
+</html>

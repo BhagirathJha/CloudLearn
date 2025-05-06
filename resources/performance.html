@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Performance Tuning - CloudLearn</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auto-theme">
+  <div class="flex flex-col min-h-screen">
+    <header class="header">
+      <div class="container flex h-16 items-center justify-between px-4 md:px-6">
+        <a href="../index.html" class="flex items-center gap-2 font-semibold">
+          <i class="fa-solid fa-cloud text-primary"></i>
+          <span>CloudLearn</span>
+        </a>
+        <div class="hidden md:flex gap-6">
+          <a href="../providers.html" class="nav-link">Providers</a>
+          <a href="../courses.html" class="nav-link">Courses</a>
+          <a href="../resources.html" class="nav-link">Resources</a>
+          <a href="../about.html" class="nav-link">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:block search-wrapper">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="search" id="search-input" placeholder="Search..." class="input input-search w-full lg:w-[300px]">
+            <div id="search-results" class="search-results hidden"></div>
+          </div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+          <button id="mobile-menu-toggle" class="md:hidden btn-icon" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="../sign-in.html" class="btn btn-primary">Sign In</a>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="container px-4 py-4">
+          <nav class="flex flex-col gap-4">
+            <a href="../providers.html" class="nav-link">Providers</a>
+            <a href="../courses.html" class="nav-link">Courses</a>
+            <a href="../resources.html" class="nav-link">Resources</a>
+            <a href="../about.html" class="nav-link">About</a>
+          </nav>
+          <div class="mt-4">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-search search-icon"></i>
+              <input type="search" placeholder="Search..." class="input input-search w-full">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="section bg-gradient-blue py-12 md:py-16">
+        <div class="container px-4 md:px-6">
+          <div class="mb-8 text-white">
+            <a href="../resources.html">
+              <button class="btn btn-ghost gap-1 pl-0 mb-4 text-white">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Resources
+              </button>
+            </a>
+            <h1 class="text-3xl font-bold tracking-tighter md:text-4xl mb-4">Performance Tuning</h1>
+            <p class="max-w-[700px] opacity-90">
+              Techniques and best practices to optimize the performance of your cloud applications and infrastructure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container px-4 py-12 md:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Main Content -->
+          <div class="lg:col-span-2">
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">Performance Optimization Fundamentals</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-6">
+                  <!-- Performance Optimization Framework -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Cloud Performance Optimization Framework</h3>
+                      <p class="text-muted-foreground mb-4">
+                        A structured approach to identifying, measuring, and improving cloud application performance.
+                      </p>
+                      <img src="https://img.freepik.com/free-vector/flat-hand-drawn-people-analyzing-growth-charts_52683-56192.jpg?t=st=1746348428~exp=1746352028~hmac=fca6952d3ba29a4ca445257b4a0e81d906e1145657c48e982d677a00c8b8a7de&w=1380" alt="Performance Optimization Framework" class="w-full rounded-md mb-4">
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Key Pillars:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li><strong>Selection:</strong> Choose the right resources and services for your workload</li>
+                          <li><strong>Review:</strong> Continuously evaluate new services and technologies</li>
+                          <li><strong>Monitoring:</strong> Implement comprehensive performance monitoring</li>
+                          <li><strong>Tradeoffs:</strong> Balance performance with other factors (cost, reliability)</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://docs.aws.amazon.com/wellarchitected/latest/performance-efficiency-pillar/welcome.html" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          AWS Well-Architected Framework - Performance Efficiency Pillar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Performance Metrics -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Key Performance Metrics</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Understanding the critical metrics for measuring cloud application performance.
+                      </p>
+                      <div class="space-y-4">
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">Compute Metrics</h4>
+                          <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li><strong>CPU Utilization:</strong> Percentage of CPU capacity in use</li>
+                            <li><strong>Memory Usage:</strong> Amount of RAM being consumed</li>
+                            <li><strong>Disk I/O:</strong> Read/write operations and throughput</li>
+                            <li><strong>Network I/O:</strong> Inbound/outbound traffic and packet rates</li>
+                          </ul>
+                        </div>
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">Application Metrics</h4>
+                          <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li><strong>Response Time:</strong> Time to process and respond to requests</li>
+                            <li><strong>Throughput:</strong> Number of requests processed per second</li>
+                            <li><strong>Error Rate:</strong> Percentage of failed requests</li>
+                            <li><strong>Latency:</strong> Time for data to travel between points</li>
+                          </ul>
+                        </div>
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">Database Metrics</h4>
+                          <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li><strong>Query Performance:</strong> Execution time of database queries</li>
+                            <li><strong>Connection Pool Utilization:</strong> Database connection usage</li>
+                            <li><strong>Cache Hit Ratio:</strong> Effectiveness of database caching</li>
+                            <li><strong>Index Usage:</strong> Efficiency of database indexes</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://learn.microsoft.com/en-us/azure/architecture/framework/scalability/performance-efficiency" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          Azure Well-Architected Framework - Performance Efficiency
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">Compute Optimization</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-6">
+                  <!-- Instance Type Selection -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Optimizing Instance Types</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Selecting the right compute resources for your specific workload requirements.
+                      </p>
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Instance Family Selection:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li><strong>General Purpose:</strong> Balanced CPU, memory, and networking (e.g., AWS t3/m5, Azure D-series)</li>
+                          <li><strong>Compute Optimized:</strong> High CPU-to-memory ratio (e.g., AWS c5, Azure F-series)</li>
+                          <li><strong>Memory Optimized:</strong> High memory-to-CPU ratio (e.g., AWS r5, Azure E-series)</li>
+                          <li><strong>Storage Optimized:</strong> High disk throughput and IOPS (e.g., AWS i3/d2, Azure L-series)</li>
+                          <li><strong>GPU Instances:</strong> For graphics and machine learning (e.g., AWS p3/g4, Azure N-series)</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">Selection Process:</h4>
+                          <ol class="list-decimal pl-5 space-y-1 text-sm">
+                            <li>Identify workload characteristics (CPU-bound, memory-bound, I/O-bound)</li>
+                            <li>Benchmark with different instance types</li>
+                            <li>Monitor performance metrics</li>
+                            <li>Adjust based on performance and cost considerations</li>
+                            <li>Regularly re-evaluate as workloads change</li>
+                          </ol>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://cloud.google.com/compute/docs/machine-types" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          Google Cloud Machine Types
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Containerization -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Performance Benefits of Containerization</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Leveraging containers to improve application performance and resource utilization.
+                      </p>
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Performance Advantages:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li><strong>Faster Startup:</strong> Containers start in seconds vs. minutes for VMs</li>
+                          <li><strong>Lower Overhead:</strong> Containers share OS kernel, reducing resource usage</li>
+                          <li><strong>Consistent Environments:</strong> Identical environments from development to production</li>
+                          <li><strong>Density:</strong> Run more containers than VMs on the same hardware</li>
+                          <li><strong>Orchestration:</strong> Tools like Kubernetes optimize placement and scaling</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">Optimization Tips:</h4>
+                          <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Use minimal base images (Alpine Linux, distroless)</li>
+                            <li>Implement multi-stage builds to reduce image size</li>
+                            <li>Set appropriate resource limits and requests</li>
+                            <li>Use node affinity and anti-affinity rules for optimal placement</li>
+                            <li>Implement horizontal pod autoscaling based on metrics</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          Kubernetes Resource Management
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">Storage Optimization</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-6">
+                  <!-- Storage Type Selection -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Optimizing Storage Performance</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Selecting and configuring the right storage solutions for your workload requirements.
+                      </p>
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Storage Type Comparison:</h4>
+                        <div class="overflow-x-auto">
+                          <table class="w-full text-sm">
+                            <thead>
+                              <tr class="bg-muted">
+                                <th class="p-2 text-left">Storage Type</th>
+                                <th class="p-2 text-left">Use Cases</th>
+                                <th class="p-2 text-left">Performance Characteristics</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="border-b">
+                                <td class="p-2">Block Storage<br>(AWS EBS, Azure Disk)</td>
+                                <td class="p-2">Databases, boot volumes, applications requiring low latency</td>
+                                <td class="p-2">High IOPS, low latency, consistent performance</td>
+                              </tr>
+                              <tr class="border-b">
+                                <td class="p-2">Object Storage<br>(S3, Blob Storage)</td>
+                                <td class="p-2">Static content, backups, archives, data lakes</td>
+                                <td class="p-2">High throughput, scalable, variable latency</td>
+                              </tr>
+                              <tr class="border-b">
+                                <td class="p-2">File Storage<br>(EFS, Azure Files)</td>
+                                <td class="p-2">Shared file access, content management</td>
+                                <td class="p-2">Moderate performance, shared access</td>
+                              </tr>
+                              <tr>
+                                <td class="p-2">In-Memory<br>(Redis, Memcached)</td>
+                                <td class="p-2">Caching, session storage, real-time analytics</td>
+                                <td class="p-2">Extremely low latency, high throughput</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">Optimization Strategies:</h4>
+                          <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Use provisioned IOPS for consistent performance</li>
+                            <li>Implement caching layers for frequently accessed data</li>
+                            <li>Use CDNs for static content delivery</li>
+                            <li>Select appropriate storage tiers based on access patterns</li>
+                            <li>Implement data lifecycle policies to move data between tiers</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          AWS EBS-Optimized Instances
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Database Performance -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Database Performance Optimization</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Techniques to improve database performance in cloud environments.
+                      </p>
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Optimization Techniques:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li><strong>Indexing:</strong> Create appropriate indexes for frequently queried columns</li>
+                          <li><strong>Query Optimization:</strong> Rewrite inefficient queries and use query hints</li>
+                          <li><strong>Connection Pooling:</strong> Reuse database connections to reduce overhead</li>
+                          <li><strong>Read Replicas:</strong> Offload read traffic to replica instances</li>
+                          <li><strong>Sharding:</strong> Partition data across multiple database instances</li>
+                          <li><strong>Caching:</strong> Implement result caching for frequent queries</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">Cloud-Specific Options:</h4>
+                          <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li><strong>AWS RDS Performance Insights:</strong> Database performance monitoring and analysis</li>
+                            <li><strong>Azure SQL Database Intelligent Performance:</strong> Automated performance tuning</li>
+                            <li><strong>Google Cloud Spanner:</strong> Horizontally scalable, strongly consistent database</li>
+                            <li><strong>Managed Redis/ElastiCache:</strong> In-memory caching for database acceleration</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/intelligent-insights-overview" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          Azure SQL Database Intelligent Performance
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-8">
+              <div class="card-header">
+                <h2 class="card-title">Network Optimization</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-6">
+                  <!-- Network Performance -->
+                  <div class="border rounded-lg overflow-hidden">
+                    <div class="p-4">
+                      <h3 class="font-semibold text-lg mb-2">Cloud Network Performance Optimization</h3>
+                      <p class="text-muted-foreground mb-4">
+                        Strategies to improve network performance and reduce latency in cloud environments.
+                      </p>
+                      <div class="space-y-2">
+                        <h4 class="font-medium">Key Optimization Techniques:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                          <li><strong>Content Delivery Networks (CDNs):</strong> Distribute content closer to users</li>
+                          <li><strong>Enhanced Networking:</strong> Use cloud provider enhanced networking options</li>
+                          <li><strong>Placement Groups:</strong> Place related instances in low-latency network clusters</li>
+                          <li><strong>Direct Connect/ExpressRoute:</strong> Dedicated connections to cloud providers</li>
+                          <li><strong>Global Accelerators:</strong> Optimize traffic routing across the global network</li>
+                          <li><strong>Load Balancing:</strong> Distribute traffic across multiple endpoints</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4">
+                        <div class="bg-muted p-3 rounded-md">
+                          <h4 class="font-medium">Implementation Tips:</h4>
+                          <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Use network performance monitoring tools</li>
+                            <li>Implement TCP optimizations for long-distance connections</li>
+                            <li>Consider regional deployment for latency-sensitive applications</li>
+                            <li>Use connection pooling and keep-alive connections</li>
+                            <li>Implement compression for network traffic</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <a href="https://aws.amazon.com/global-accelerator/" target="_blank" class="text-primary hover:underline">
+                          <i class="fa-solid fa-external-link-alt mr-1"></i>
+                          AWS Global Accelerator
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div>
+            <div class="card mb-6 sticky top-20">
+              <div class="card-header">
+                <h2 class="card-title">Performance Resources</h2>
+              </div>
+              <div class="card-content">
+                <div class="space-y-4">
+                  <h3 class="font-semibold">Monitoring Tools</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-chart-line text-primary mt-1"></i>
+                      <div>
+                        <a href="https://aws.amazon.com/cloudwatch/" target="_blank" class="font-medium hover:text-primary">AWS CloudWatch</a>
+                        <p class="text-sm text-muted-foreground">Monitoring and observability service</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-chart-line text-primary mt-1"></i>
+                      <div>
+                        <a href="https://azure.microsoft.com/en-us/services/monitor/" target="_blank" class="font-medium hover:text-primary">Azure Monitor</a>
+                        <p class="text-sm text-muted-foreground">Full-stack monitoring solution</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-chart-line text-primary mt-1"></i>
+                      <div>
+                        <a href="https://cloud.google.com/monitoring" target="_blank" class="font-medium hover:text-primary">Google Cloud Monitoring</a>
+                        <p class="text-sm text-muted-foreground">Performance monitoring service</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-chart-line text-primary mt-1"></i>
+                      <div>
+                        <a href="https://www.datadoghq.com/" target="_blank" class="font-medium hover:text-primary">Datadog</a>
+                        <p class="text-sm text-muted-foreground">Cloud-scale monitoring and analytics</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="border-t my-4"></div>
+
+                  <h3 class="font-semibold">Performance Testing Tools</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-tachometer-alt text-primary mt-1"></i>
+                      <div>
+                        <a href="https://jmeter.apache.org/" target="_blank" class="font-medium hover:text-primary">Apache JMeter</a>
+                        <p class="text-sm text-muted-foreground">Load testing and performance measurement</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-tachometer-alt text-primary mt-1"></i>
+                      <div>
+                        <a href="https://k6.io/" target="_blank" class="font-medium hover:text-primary">k6</a>
+                        <p class="text-sm text-muted-foreground">Modern load testing tool</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-tachometer-alt text-primary mt-1"></i>
+                      <div>
+                        <a href="https://gatling.io/" target="_blank" class="font-medium hover:text-primary">Gatling</a>
+                        <p class="text-sm text-muted-foreground">High-performance load testing tool</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="border-t my-4"></div>
+
+                  <h3 class="font-semibold">Whitepapers & Guides</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-file-pdf text-primary mt-1"></i>
+                      <div>
+                        <a href="https://docs.aws.amazon.com/wellarchitected/latest/performance-efficiency-pillar/welcome.html" target="_blank" class="font-medium hover:text-primary">AWS Performance Efficiency Pillar</a>
+                        <p class="text-sm text-muted-foreground">Well-Architected Framework guide</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-file-pdf text-primary mt-1"></i>
+                      <div>
+                        <a href="https://learn.microsoft.com/en-us/azure/architecture/framework/scalability/performance-efficiency" target="_blank" class="font-medium hover:text-primary">Azure Performance Efficiency</a>
+                        <p class="text-sm text-muted-foreground">Azure Well-Architected Framework</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container flex flex-col gap-6 py-8 md:py-12 px-4 md:px-6">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <a href="../index.html" class="flex items-center gap-2 font-semibold">
+            <i class="fa-solid fa-cloud text-primary"></i>
+            <span>CloudLearn</span>
+          </a>
+          <nav class="flex gap-4 md:gap-6 flex-wrap justify-center">
+            <a href="../providers.html" class="nav-link">Providers</a>
+            <a href="../courses.html" class="nav-link">Courses</a>
+            <a href="../resources.html" class="nav-link">Resources</a>
+            <a href="../about.html" class="nav-link">About</a>
+            <a href="../contact.html" class="nav-link">Contact</a>
+          </nav>
+        </div>
+        <div class="text-center md:text-left text-sm text-muted-foreground">
+          © <span id="current-year"></span> CloudLearn. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../scripts.js"></script>
+</body>
+</html>

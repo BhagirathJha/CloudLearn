@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Service Providers - CloudLearn</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auto-theme">
+  <div class="flex flex-col min-h-screen">
+    <header class="header">
+      <div class="container flex h-16 items-center justify-between px-4 md:px-6">
+        <a href="index.html" class="flex items-center gap-2 font-semibold">
+          <i class="fa-solid fa-cloud text-primary"></i>
+          <span>CloudLearn</span>
+        </a>
+        <div class="hidden md:flex gap-6">
+          <a href="providers.html" class="nav-link">Providers</a>
+          <a href="courses.html" class="nav-link">Courses</a>
+          <a href="resources.html" class="nav-link">Resources</a>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:block search-wrapper">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="search" id="search-input" placeholder="Search..." class="input input-search w-full lg:w-[300px]">
+            <div id="search-results" class="search-results hidden"></div>
+          </div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+          <!-- Add this button for mobile menu toggle -->
+          <button id="mobile-menu-toggle" class="md:hidden btn-icon" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <button id="sign-in-btn" class="btn btn-primary">Sign In</button>
+        </div>
+      </div>
+      <!-- Add the mobile menu right after the header container div -->
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="container px-4 py-4">
+          <nav class="flex flex-col gap-4">
+            <a href="providers.html" class="nav-link">Providers</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="about.html" class="nav-link">About</a>
+          </nav>
+          <div class="mt-4">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-search search-icon"></i>
+              <input type="search" placeholder="Search..." class="input input-search w-full">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="section bg-gradient-blue py-12 md:py-16">
+        <div class="container px-4 md:px-6">
+          <div class="mb-8 text-white">
+            <a href="index.html">
+              <button class="btn btn-ghost gap-1 pl-0 mb-4 text-white">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Home
+              </button>
+            </a>
+            <h1 class="text-3xl font-bold tracking-tighter md:text-4xl mb-4">Cloud Service Providers</h1>
+            <p class="max-w-[700px] opacity-90">
+              Explore comprehensive learning materials for all major cloud platforms. Each provider section includes basic
+              to advanced tutorials, service documentation, and hands-on exercises.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container px-4 py-12 md:px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- AWS -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">AWS</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Amazon Web Services - The most comprehensive cloud platform</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/aws.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Azure -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" alt="Azure logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">Azure</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Microsoft Azure - Integrated cloud services for enterprise</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/azure.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- GCP -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="GCP logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">GCP</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Google Cloud Platform - Build on the same infrastructure as Google</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/gcp.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- IBM Cloud -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Cloud logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">IBM Cloud</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Enterprise-grade cloud solutions with focus on security</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/ibm.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Oracle Cloud -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle Cloud logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">Oracle Cloud</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Oracle Cloud Infrastructure for enterprise applications</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/oci.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Alibaba Cloud -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://img.alicdn.com/imgextra/i4/O1CN01cMRNZN1Q3rqeuFGkP_!!6000000001921-55-tps-296-37.svg" alt="Alibaba Cloud logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">Alibaba Cloud</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Leading cloud provider in Asia-Pacific region</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/alibaba.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Salesforce -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">Salesforce</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Cloud-based software focused on customer relationship management</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/salesforce.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- SAP Cloud -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" alt="SAP Cloud logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">SAP Cloud</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Enterprise resource planning and business applications</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/sap.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- DigitalOcean -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/DigitalOcean_logo.svg" alt="DigitalOcean logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">DigitalOcean</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Simple cloud platform for developers and small businesses</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/digitalocean.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- VMware Cloud -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg" alt="VMware Cloud logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">VMware Cloud</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Consistent infrastructure and operations across clouds</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/vmware.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Nextcloud -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://nextcloud.com/c/uploads/2022/11/logo_nextcloud_blue.png" alt="Nextcloud logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">Nextcloud</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Consistent infrastructure and operations across clouds</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/vmware.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Tencent Cloud -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://www.logoquake.com/uploadfile/2024/0628/tencent-cloud-logoquake_1f962e.png" alt="Tencent Cloud logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">Tencent Cloud</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Global cloud computing services from China</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/tencent.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container flex flex-col gap-6 py-8 md:py-12 px-4 md:px-6">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <a href="index.html" class="flex items-center gap-2 font-semibold">
+            <i class="fa-solid fa-cloud text-primary"></i>
+            <span>CloudLearn</span>
+          </a>
+          <nav class="flex gap-4 md:gap-6 flex-wrap justify-center">
+            <a href="providers.html" class="nav-link">Providers</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+        </div>
+        <div class="text-center md:text-left text-sm text-muted-foreground">
+          © <span id="current-year"></span> CloudLearn. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Sign In Modal -->
+  <div id="sign-in-modal" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Sign In</h3>
+        <button class="modal-close" id="close-modal">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="sign-in-form">
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
+          </div>
+          <div class="flex justify-between items-center mb-4">
+            <div>
+              <input type="checkbox" id="remember-me">
+              <label for="remember-me" class="text-sm">Remember me</label>
+            </div>
+            <a href="#" class="text-sm text-primary">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary w-full">Sign In</button>
+        </form>
+        <div class="mt-4 text-center">
+          <p class="text-sm text-muted-foreground">Don't have an account? <a href="#" class="text-primary">Sign up</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
+    
+    // Check for saved theme preference or use device preference
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark');
+      document.body.classList.remove('auto-theme');
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
+    } else if (savedTheme === 'light') {
+      document.body.classList.remove('dark');
+      document.body.classList.remove('auto-theme');
+      themeIcon.classList.add('fa-sun');
+      themeIcon.classList.remove('fa-moon');
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      if (document.body.classList.contains('dark')) {
+        // Switch to light mode
+        document.body.classList.remove('dark');
+        document.body.classList.remove('auto-theme');
+        localStorage.setItem('theme', 'light');
+        themeIcon.classList.add('fa-sun');
+        themeIcon.classList.remove('fa-moon');
+      } else {
+        // Switch to dark mode
+        document.body.classList.add('dark');
+        document.body.classList.remove('auto-theme');
+        localStorage.setItem('theme', 'dark');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      }
+    });
+    
+    // Sign in modal functionality
+    const signInBtn = document.getElementById('sign-in-btn');
+    const signInModal = document.getElementById('sign-in-modal');
+    const closeModal = document.getElementById('close-modal');
+    
+    signInBtn.addEventListener('click', () => {
+      signInModal.classList.add('active');
+    });
+    
+    closeModal.addEventListener('click', () => {
+      signInModal.classList.remove('active');
+    });
+    
+    // Close modal when clicking outside
+    signInModal.addEventListener('click', (e) => {
+      if (e.target === signInModal) {
+        signInModal.classList.remove('active');
+      }
+    });
+    
+    // Search functionality
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    
+    // Sample search data (in a real app, this would come from a database or API)
+    const searchData = [
+      { title: 'AWS', category: 'Provider', url: 'providers/aws.html' },
+      { title: 'Azure', category: 'Provider', url: 'providers/azure.html' },
+      { title: 'Google Cloud Platform', category: 'Provider', url: 'providers/gcp.html' },
+      { title: 'IBM Cloud', category: 'Provider', url: 'providers/ibm.html' },
+      { title: 'Oracle Cloud', category: 'Provider', url: 'providers/oci.html' },
+      { title: 'Cloud Fundamentals', category: 'Course', url: 'courses/cloud-fundamentals.html' },
+      { title: 'AWS Solutions Architect', category: 'Course', url: 'courses/aws-solutions-architect.html' },
+      { title: 'Multi-Cloud Strategy', category: 'Course', url: 'courses/multi-cloud-strategy.html' },
+      { title: 'Cloud Security', category: 'Resource', url: 'resources/cloud-security.html' },
+      { title: 'Serverless Computing', category: 'Resource', url: 'resources/serverless.html' }
+    ];
+    
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase().trim();
+      
+      if (query.length < 2) {
+        searchResults.classList.add('hidden');
+        return;
+      }
+      
+      const filteredResults = searchData.filter(item => 
+        item.title.toLowerCase().includes(query) || 
+        item.category.toLowerCase().includes(query)
+      );
+      
+      if (filteredResults.length > 0) {
+        searchResults.innerHTML = filteredResults.map(result => `
+          <div class="search-result-item" data-url="${result.url}">
+            <div class="search-result-title">${result.title}</div>
+            <div class="search-result-category">${result.category}</div>
+          </div>
+        `).join('');
+        
+        searchResults.classList.remove('hidden');
+        
+        // Add click event to search results
+        document.querySelectorAll('.search-result-item').forEach(item => {
+          item.addEventListener('click', () => {
+            window.location.href = item.dataset.url;
+          });
+        });
+      } else {
+        searchResults.innerHTML = `<div class="search-result-item">No results found</div>`;
+        searchResults.classList.remove('hidden');
+      }
+    });
+    
+    // Hide search results when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.classList.add('hidden');
+      }
+    });
+    
+    // Form submission
+    const signInForm = document.getElementById('sign-in-form');
+    
+    signInForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // In a real app, you would handle authentication here
+      alert('Sign in functionality would be implemented in a real application.');
+      signInModal.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

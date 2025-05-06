@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - CloudLearn</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auto-theme">
+  <div class="flex flex-col min-h-screen">
+    <header class="header">
+      <div class="container flex h-16 items-center justify-between px-4 md:px-6">
+        <a href="index.html" class="flex items-center gap-2 font-semibold">
+          <i class="fa-solid fa-cloud text-primary"></i>
+          <span>CloudLearn</span>
+        </a>
+        <div class="hidden md:flex gap-6">
+          <a href="providers.html" class="nav-link">Providers</a>
+          <a href="courses.html" class="nav-link">Courses</a>
+          <a href="resources.html" class="nav-link">Resources</a>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:block search-wrapper">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="search" id="search-input" placeholder="Search..." class="input input-search w-full lg:w-[300px]">
+            <div id="search-results" class="search-results hidden"></div>
+          </div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+          <button id="mobile-menu-toggle" class="md:hidden btn-icon" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="sign-in.html" class="btn btn-primary">Sign In</a>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="container px-4 py-4">
+          <nav class="flex flex-col gap-4">
+            <a href="providers.html" class="nav-link">Providers</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="about.html" class="nav-link">About</a>
+          </nav>
+          <div class="mt-4">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-search search-icon"></i>
+              <input type="search" placeholder="Search..." class="input input-search w-full">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="section bg-gradient-blue py-12 md:py-16">
+        <div class="container px-4 md:px-6">
+          <div class="mb-8 text-white">
+            <a href="index.html">
+              <button class="btn btn-ghost gap-1 pl-0 mb-4 text-white">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Home
+              </button>
+            </a>
+            <h1 class="text-3xl font-bold tracking-tighter md:text-4xl mb-4">About CloudLearn</h1>
+            <p class="max-w-[700px] opacity-90">
+              Learn about our mission to make cloud computing education accessible to everyone.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container px-4 py-12 md:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
+            <p class="mb-4">
+              CloudLearn was founded with a simple mission: to make cloud computing education accessible, comprehensive, and up-to-date for everyone, regardless of their experience level.
+            </p>
+            <p class="mb-4">
+              In today's rapidly evolving tech landscape, cloud skills are no longer optional—they're essential. Yet, learning cloud technologies can be overwhelming due to the vast array of services, providers, and constantly changing features.
+            </p>
+            <p class="mb-6">
+              That's why we've created a centralized learning portal that covers all major cloud service providers, offering structured learning paths from beginner to advanced levels, detailed documentation, and practical hands-on exercises.
+            </p>
+            
+            <h2 class="text-2xl font-bold mb-4">What We Offer</h2>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2">
+                <div class="rounded-full bg-primary p-1 text-primary-foreground">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span>Comprehensive coverage of AWS, Azure, GCP, and other cloud providers</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="rounded-full bg-primary p-1 text-primary-foreground">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span>Structured learning paths for different skill levels</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="rounded-full bg-primary p-1 text-primary-foreground">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span>Detailed service documentation and comparison tools</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="rounded-full bg-primary p-1 text-primary-foreground">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span>Practical tutorials and hands-on exercises</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="rounded-full bg-primary p-1 text-primary-foreground">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span>Community forums and expert support</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="flex justify-center">
+            <div class="bg-gradient-purple rounded-lg p-8 text-white max-w-md">
+              <h3 class="text-xl font-bold mb-4">Our Values</h3>
+              <div class="space-y-4">
+                <div class="bg-white bg-opacity-10 p-4 rounded-md">
+                  <h4 class="font-bold mb-2">Accessibility</h4>
+                  <p>Making cloud education available to everyone, regardless of background or experience level.</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-4 rounded-md">
+                  <h4 class="font-bold mb-2">Accuracy</h4>
+                  <p>Providing up-to-date, accurate information that reflects the current state of cloud technologies.</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-4 rounded-md">
+                  <h4 class="font-bold mb-2">Practicality</h4>
+                  <p>Focusing on real-world applications and hands-on learning that translates to job skills.</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-4 rounded-md">
+                  <h4 class="font-bold mb-2">Community</h4>
+                  <p>Building a supportive community of cloud learners and professionals to share knowledge.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-16">
+          <h2 class="text-2xl font-bold mb-6 text-center">Our Team</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Team Member 1 -->
+            <div class="card text-center">
+              <div class="card-content p-6">
+                <div class="w-24 h-24 rounded-full bg-gradient-blue mx-auto mb-4 flex items-center justify-center">
+                  <i class="fa-solid fa-user text-white text-3xl"></i>
+                </div>
+                <h3 class="font-bold text-lg">Bhagirath Jha</h3>
+                <p class="text-sm text-muted-foreground">Founder & CEO</p>
+                <p class="mt-2 text-sm">Cloud architect with 1+ years of experience across multiple platforms.</p>
+              </div>
+            </div>
+            
+            <!-- Team Member 2 -->
+            <div class="card text-center">
+              <div class="card-content p-6">
+                <div class="w-24 h-24 rounded-full bg-gradient-purple mx-auto mb-4 flex items-center justify-center">
+                  <i class="fa-solid fa-user text-white text-3xl"></i>
+                </div>
+                <h3 class="font-bold text-lg">Gautam Jha</h3>
+                <p class="text-sm text-muted-foreground">CTO</p>
+                <p class="mt-2 text-sm">Former AWS solutions architect and cloud security specialist.</p>
+              </div>
+            </div>
+            
+            <!-- Team Member 3 -->
+            <div class="card text-center">
+              <div class="card-content p-6">
+                <div class="w-24 h-24 rounded-full bg-gradient-green mx-auto mb-4 flex items-center justify-center">
+                  <i class="fa-solid fa-user text-white text-3xl"></i>
+                </div>
+                <h3 class="font-bold text-lg">Sumant Jha</h3>
+                <p class="text-sm text-muted-foreground">Head of Content</p>
+                <p class="mt-2 text-sm">Technical writer and educator specializing in cloud technologies.</p>
+              </div>
+            </div>
+            
+            <!-- Team Member 4 -->
+            <div class="card text-center">
+              <div class="card-content p-6">
+                <div class="w-24 h-24 rounded-full bg-gradient-orange mx-auto mb-4 flex items-center justify-center">
+                  <i class="fa-solid fa-user text-white text-3xl"></i>
+                </div>
+                <h3 class="font-bold text-lg">Bella Jha</h3>
+                <p class="text-sm text-muted-foreground">Lead Developer</p>
+                <p class="mt-2 text-sm">Full-stack developer with expertise in cloud-native applications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container flex flex-col gap-6 py-8 md:py-12 px-4 md:px-6">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <a href="index.html" class="flex items-center gap-2 font-semibold">
+            <i class="fa-solid fa-cloud text-primary"></i>
+            <span>CloudLearn</span>
+          </a>
+          <nav class="flex gap-4 md:gap-6 flex-wrap justify-center">
+            <a href="providers.html" class="nav-link">Providers</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+        </div>
+        <div class="text-center md:text-left text-sm text-muted-foreground">
+          © <span id="current-year"></span> CloudLearn. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

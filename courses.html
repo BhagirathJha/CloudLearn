@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Paths & Courses - CloudLearn</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="flex flex-col min-h-screen">
+    <header class="header">
+      <div class="container flex h-16 items-center justify-between px-4 md:px-6">
+        <a href="index.html" class="flex items-center gap-2 font-semibold">
+          <i class="fa-solid fa-cloud"></i>
+          <span>CloudLearn</span>
+        </a>
+        <div class="hidden md:flex gap-6">
+          <a href="providers.html" class="nav-link">Providers</a>
+          <a href="courses.html" class="nav-link">Courses</a>
+          <a href="resources.html" class="nav-link">Resources</a>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:block search-wrapper">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="search" placeholder="Search..." class="input input-search w-full lg:w-[300px]">
+          </div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+          <!-- Add this button for mobile menu toggle -->
+          <button id="mobile-menu-toggle" class="md:hidden btn-icon" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <button class="btn btn-primary">Sign In</button>
+        </div>
+      </div>
+      <!-- Add the mobile menu right after the header container div -->
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="container px-4 py-4">
+          <nav class="flex flex-col gap-4">
+            <a href="providers.html" class="nav-link">Providers</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="about.html" class="nav-link">About</a>
+          </nav>
+          <div class="mt-4">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-search search-icon"></i>
+              <input type="search" placeholder="Search..." class="input input-search w-full">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <div class="container px-4 py-12 md:px-6 md:py-16 lg:py-24">
+        <div class="mb-8">
+          <a href="index.html">
+            <button class="btn btn-ghost gap-1 pl-0 mb-4">
+              <i class="fa-solid fa-arrow-left"></i>
+              Back to Home
+            </button>
+          </a>
+          <h1 class="text-3xl font-bold tracking-tighter md:text-4xl mb-4">Learning Paths & Courses</h1>
+          <p class="text-muted-foreground max-w-[700px]">
+            Structured learning paths and courses to help you master cloud computing technologies from beginner to
+            advanced levels.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Cloud Fundamentals -->
+          <div class="card course-card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">Fundamentals</span>
+                <span class="badge badge-secondary">Multi-Cloud</span>
+              </div>
+              <h3 class="card-title">Cloud Fundamentals</h3>
+            </div>
+            <div class="card-content course-card-content">
+              <p class="text-muted-foreground mb-4">Learn the core concepts of cloud computing applicable to all providers</p>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-book-open text-muted-foreground"></i>
+                  <span>Beginner</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-regular fa-clock text-muted-foreground"></i>
+                  <span>4 weeks</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-users text-muted-foreground"></i>
+                  <span>5,234 students</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-graduation-cap text-muted-foreground"></i>
+                  <span>Certificate</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="courses/cloud-fundamentals.html" class="w-full">
+                <button class="btn btn-primary w-full">View Course</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- AWS Solutions Architect -->
+          <div class="card course-card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">AWS</span>
+                <span class="badge badge-secondary">Architecture</span>
+              </div>
+              <h3 class="card-title">AWS Solutions Architect</h3>
+            </div>
+            <div class="card-content course-card-content">
+              <p class="text-muted-foreground mb-4">Comprehensive path to master AWS architecture and services</p>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-book-open text-muted-foreground"></i>
+                  <span>Intermediate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-regular fa-clock text-muted-foreground"></i>
+                  <span>12 weeks</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-users text-muted-foreground"></i>
+                  <span>3,129 students</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-graduation-cap text-muted-foreground"></i>
+                  <span>Certificate</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="courses/aws-solutions-architect.html" class="w-full">
+                <button class="btn btn-primary w-full">View Course</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Azure Administrator -->
+          <div class="card course-card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">Azure</span>
+                <span class="badge badge-secondary">Administration</span>
+              </div>
+              <h3 class="card-title">Azure Administrator</h3>
+            </div>
+            <div class="card-content course-card-content">
+              <p class="text-muted-foreground mb-4">Learn to implement, monitor, and maintain Microsoft Azure solutions</p>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-book-open text-muted-foreground"></i>
+                  <span>Intermediate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-regular fa-clock text-muted-foreground"></i>
+                  <span>10 weeks</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-users text-muted-foreground"></i>
+                  <span>2,845 students</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-graduation-cap text-muted-foreground"></i>
+                  <span>Certificate</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="courses/azure-administrator.html" class="w-full">
+                <button class="btn btn-primary w-full">View Course</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Google Cloud Engineer -->
+          <div class="card course-card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">GCP</span>
+                <span class="badge badge-secondary">Engineering</span>
+              </div>
+              <h3 class="card-title">Google Cloud Engineer</h3>
+            </div>
+            <div class="card-content course-card-content">
+              <p class="text-muted-foreground mb-4">Deploy and manage cloud solutions on Google Cloud Platform</p>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-book-open text-muted-foreground"></i>
+                  <span>Intermediate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-regular fa-clock text-muted-foreground"></i>
+                  <span>8 weeks</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-users text-muted-foreground"></i>
+                  <span>1,932 students</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-graduation-cap text-muted-foreground"></i>
+                  <span>Certificate</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="courses/gcp-engineer.html" class="w-full">
+                <button class="btn btn-primary w-full">View Course</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Multi-Cloud Strategy -->
+          <div class="card course-card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">Multi-Cloud</span>
+                <span class="badge badge-secondary">Strategy</span>
+              </div>
+              <h3 class="card-title">Multi-Cloud Strategy</h3>
+            </div>
+            <div class="card-content course-card-content">
+              <p class="text-muted-foreground mb-4">Learn how to implement and manage multi-cloud environments</p>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-book-open text-muted-foreground"></i>
+                  <span>Advanced</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-regular fa-clock text-muted-foreground"></i>
+                  <span>8 weeks</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-users text-muted-foreground"></i>
+                  <span>1,245 students</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-graduation-cap text-muted-foreground"></i>
+                  <span>Certificate</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="courses/multi-cloud-strategy.html" class="w-full">
+                <button class="btn btn-primary w-full">View Course</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Cloud Security Fundamentals -->
+          <div class="card course-card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">Security</span>
+                <span class="badge badge-secondary">Multi-Cloud</span>
+              </div>
+              <h3 class="card-title">Cloud Security Fundamentals</h3>
+            </div>
+            <div class="card-content course-card-content">
+              <p class="text-muted-foreground mb-4">Essential security practices for cloud environments</p>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-book-open text-muted-foreground"></i>
+                  <span>Intermediate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-regular fa-clock text-muted-foreground"></i>
+                  <span>6 weeks</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-users text-muted-foreground"></i>
+                  <span>2,567 students</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-graduation-cap text-muted-foreground"></i>
+                  <span>Certificate</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="courses/cloud-security.html" class="w-full">
+                <button class="btn btn-primary w-full">View Course</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Kubernetes Mastery -->
+          <div class="card course-card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">Containers</span>
+                <span class="badge badge-secondary">Kubernetes</span>
+              </div>
+              <h3 class="card-title">Kubernetes Mastery</h3>
+            </div>
+            <div class="card-content course-card-content">
+              <p class="text-muted-foreground mb-4">Deep dive into container orchestration with Kubernetes</p>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-book-open text-muted-foreground"></i>
+                  <span>Advanced</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-regular fa-clock text-muted-foreground"></i>
+                  <span>10 weeks</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-users text-muted-foreground"></i>
+                  <span>1,876 students</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-graduation-cap text-muted-foreground"></i>
+                  <span>Certificate</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="courses/kubernetes-mastery.html" class="w-full">
+                <button class="btn btn-primary w-full">View Course</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Serverless Applications -->
+          <div class="card course-card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">Serverless</span>
+                <span class="badge badge-secondary">Development</span>
+              </div>
+              <h3 class="card-title">Serverless Applications</h3>
+            </div>
+            <div class="card-content course-card-content">
+              <p class="text-muted-foreground mb-4">Build scalable applications using serverless architectures</p>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-book-open text-muted-foreground"></i>
+                  <span>Intermediate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-regular fa-clock text-muted-foreground"></i>
+                  <span>6 weeks</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-users text-muted-foreground"></i>
+                  <span>1,543 students</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-graduation-cap text-muted-foreground"></i>
+                  <span>Certificate</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="courses/serverless-applications.html" class="w-full">
+                <button class="btn btn-primary w-full">View Course</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Cloud DevOps -->
+          <div class="card course-card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">DevOps</span>
+                <span class="badge badge-secondary">CI/CD</span>
+              </div>
+              <h3 class="card-title">Cloud DevOps</h3>
+            </div>
+            <div class="card-content course-card-content">
+              <p class="text-muted-foreground mb-4">Implement DevOps practices in cloud environments</p>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-book-open text-muted-foreground"></i>
+                  <span>Advanced</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-regular fa-clock text-muted-foreground"></i>
+                  <span>12 weeks</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-users text-muted-foreground"></i>
+                  <span>1,234 students</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-graduation-cap text-muted-foreground"></i>
+                  <span>Certificate</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="courses/cloud-devops.html" class="w-full">
+                <button class="btn btn-primary w-full">View Course</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container flex flex-col gap-6 py-8 md:py-12 px-4 md:px-6">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <a href="index.html" class="flex items-center gap-2 font-semibold">
+            <i class="fa-solid fa-cloud"></i>
+            <span>CloudLearn</span>
+          </a>
+          <nav class="flex gap-4 md:gap-6 flex-wrap justify-center">
+            <a href="providers.html" class="nav-link">Providers</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+        </div>
+        <div class="text-center md:text-left text-sm text-muted-foreground">
+          © <span id="current-year"></span> CloudLearn. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Resources - CloudLearn</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auto-theme">
+  <div class="flex flex-col min-h-screen">
+    <header class="header">
+      <div class="container flex h-16 items-center justify-between px-4 md:px-6">
+        <a href="index.html" class="flex items-center gap-2 font-semibold">
+          <i class="fa-solid fa-cloud text-primary"></i>
+          <span>CloudLearn</span>
+        </a>
+        <div class="hidden md:flex gap-6">
+          <a href="providers.html" class="nav-link">Providers</a>
+          <a href="courses.html" class="nav-link">Courses</a>
+          <a href="resources.html" class="nav-link">Resources</a>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:block search-wrapper">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="search" id="search-input" placeholder="Search..." class="input input-search w-full lg:w-[300px]">
+            <div id="search-results" class="search-results hidden"></div>
+          </div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+          <button id="mobile-menu-toggle" class="md:hidden btn-icon" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="sign-in.html" class="btn btn-primary">Sign In</a>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="container px-4 py-4">
+          <nav class="flex flex-col gap-4">
+            <a href="providers.html" class="nav-link">Providers</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="about.html" class="nav-link">About</a>
+          </nav>
+          <div class="mt-4">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-search search-icon"></i>
+              <input type="search" placeholder="Search..." class="input input-search w-full">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="section bg-gradient-blue py-12 md:py-16">
+        <div class="container px-4 md:px-6">
+          <div class="mb-8 text-white">
+            <a href="index.html">
+              <button class="btn btn-ghost gap-1 pl-0 mb-4 text-white">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Home
+              </button>
+            </a>
+            <h1 class="text-3xl font-bold tracking-tighter md:text-4xl mb-4">Learning Resources</h1>
+            <p class="max-w-[700px] opacity-90">
+              Explore our collection of guides, tutorials, diagrams, and reference materials to enhance your cloud computing knowledge.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container px-4 py-12 md:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Cloud Architecture Diagrams -->
+          <div class="card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">Diagrams</span>
+                <span class="badge badge-secondary">Architecture</span>
+              </div>
+              <h3 class="card-title">Cloud Architecture Diagrams</h3>
+            </div>
+            <div class="card-content">
+              <p class="text-muted-foreground mb-4">Visual representations of cloud architectures and service relationships</p>
+              <img src="https://img.freepik.com/free-vector/cloud-technology-infographic-set-with-cloud-wallet-identity-symbols-isometric-vector-illustration_1284-71628.jpg?t=st=1746343362~exp=1746346962~hmac=16ea9a31df616fb31f354a36ab973d353824fc24d71dd5bed7ebacba645e4fe3&w=1800" alt="Cloud Architecture Diagram" class="w-full h-48 object-cover rounded-md mb-4">
+            </div>
+            <div class="card-footer">
+              <a href="resources/diagrams.html" class="w-full">
+                <button class="btn btn-primary w-full">View Diagrams</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Cloud Security Best Practices -->
+          <div class="card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">Security</span>
+                <span class="badge badge-secondary">Best Practices</span>
+              </div>
+              <h3 class="card-title">Cloud Security Best Practices</h3>
+            </div>
+            <div class="card-content">
+              <p class="text-muted-foreground mb-4">Comprehensive guides for securing your cloud environments</p>
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cloud Security" class="w-full h-48 object-cover rounded-md mb-4">
+            </div>
+            <div class="card-footer">
+              <a href="resources/security.html" class="w-full">
+                <button class="btn btn-primary w-full">View Security Guides</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Cost Optimization -->
+          <div class="card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">Cost</span>
+                <span class="badge badge-secondary">Optimization</span>
+              </div>
+              <h3 class="card-title">Cloud Cost Optimization</h3>
+            </div>
+            <div class="card-content">
+              <p class="text-muted-foreground mb-4">Strategies and tools to optimize your cloud spending</p>
+              <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cost Optimization" class="w-full h-48 object-cover rounded-md mb-4">
+            </div>
+            <div class="card-footer">
+              <a href="resources/cost-optimization.html" class="w-full">
+                <button class="btn btn-primary w-full">View Cost Guides</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Performance Tuning -->
+          <div class="card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">Performance</span>
+                <span class="badge badge-secondary">Optimization</span>
+              </div>
+              <h3 class="card-title">Performance Tuning</h3>
+            </div>
+            <div class="card-content">
+              <p class="text-muted-foreground mb-4">Techniques to optimize performance of your cloud applications</p>
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Performance Tuning" class="w-full h-48 object-cover rounded-md mb-4">
+            </div>
+            <div class="card-footer">
+              <a href="resources/performance.html" class="w-full">
+                <button class="btn btn-primary w-full">View Performance Guides</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Serverless Computing -->
+          <div class="card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">Serverless</span>
+                <span class="badge badge-secondary">Architecture</span>
+              </div>
+              <h3 class="card-title">Serverless Computing</h3>
+            </div>
+            <div class="card-content">
+              <p class="text-muted-foreground mb-4">Resources for building and deploying serverless applications</p>
+              <img src="https://images.unsplash.com/photo-1599507593499-a3f7d7d97667?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Serverless Computing" class="w-full h-48 object-cover rounded-md mb-4">
+            </div>
+            <div class="card-footer">
+              <a href="resources/serverless.html" class="w-full">
+                <button class="btn btn-primary w-full">View Serverless Guides</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Containerization -->
+          <div class="card">
+            <div class="card-header">
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-secondary">Containers</span>
+                <span class="badge badge-secondary">Docker</span>
+              </div>
+              <h3 class="card-title">Containerization</h3>
+            </div>
+            <div class="card-content">
+              <p class="text-muted-foreground mb-4">Guides for containerizing applications with Docker and Kubernetes</p>
+              <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Containerization" class="w-full h-48 object-cover rounded-md mb-4">
+            </div>
+            <div class="card-footer">
+              <a href="resources/containers.html" class="w-full">
+                <button class="btn btn-primary w-full">View Container Guides</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container flex flex-col gap-6 py-8 md:py-12 px-4 md:px-6">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <a href="index.html" class="flex items-center gap-2 font-semibold">
+            <i class="fa-solid fa-cloud text-primary"></i>
+            <span>CloudLearn</span>
+          </a>
+          <nav class="flex gap-4 md:gap-6 flex-wrap justify-center">
+            <a href="providers.html" class="nav-link">Providers</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+        </div>
+        <div class="text-center md:text-left text-sm text-muted-foreground">
+          © <span id="current-year"></span> CloudLearn. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

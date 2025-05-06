@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudLearn - Cloud Service Provider Learning Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auto-theme">
+  <div class="flex flex-col min-h-screen">
+    <header class="header">
+      <div class="container flex h-16 items-center justify-between px-4 md:px-6">
+        <a href="index.html" class="flex items-center gap-2 font-semibold">
+          <i class="fa-solid fa-cloud text-primary"></i>
+          <span>CloudLearn</span>
+        </a>
+        <div class="hidden md:flex gap-6">
+          <a href="providers.html" class="nav-link">Providers</a>
+          <a href="courses.html" class="nav-link">Courses</a>
+          <a href="resources.html" class="nav-link">Resources</a>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:block search-wrapper">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="search" id="search-input" placeholder="Search..." class="input input-search w-full lg:w-[300px]">
+            <div id="search-results" class="search-results hidden"></div>
+          </div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+          <!-- Add this button for mobile menu toggle -->
+          <button id="mobile-menu-toggle" class="md:hidden btn-icon" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="sign-in.html" class="btn btn-primary">Sign In</a>
+        </div>
+      </div>
+      <!-- Add the mobile menu right after the header container div -->
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="container px-4 py-4">
+          <nav class="flex flex-col gap-4">
+            <a href="providers.html" class="nav-link">Providers</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+            <a href="about.html" class="nav-link">About</a>
+          </nav>
+          <div class="mt-4">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-search search-icon"></i>
+              <input type="search" placeholder="Search..." class="input input-search w-full">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="section section-gradient py-12 md:py-24 lg:py-32">
+        <div class="container px-4 md:px-6">
+          <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
+            <div class="flex flex-col justify-center space-y-4">
+              <div class="space-y-2">
+                <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                  Master Cloud Computing with Comprehensive Learning Resources
+                </h1>
+                <p class="max-w-[600px] md:text-xl">
+                  From basics to advanced concepts, learn everything about major cloud service providers in one place.
+                </p>
+              </div>
+              <div class="flex flex-col gap-2 sm:flex-row">
+                <a href="providers.html">
+                  <button class="btn btn-accent btn-lg">
+                    Explore Providers
+                    <i class="fa-solid fa-arrow-right ml-1"></i>
+                  </button>
+                </a>
+                <a href="courses.html">
+                  <button class="btn btn-outline btn-lg" style="background-color: rgba(255, 255, 255, 0.2); color: white; border-color: rgba(255, 255, 255, 0.3);">
+                    Browse Courses
+                    <i class="fa-solid fa-book-open ml-1"></i>
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <div class="slider-container">
+                <div class="slider">
+                  <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cloud Computing">
+                    <div class="slide-content">
+                      <h2 class="text-2xl font-bold mb-2">Cloud Computing Revolution</h2>
+                      <p>Transform your business with cutting-edge cloud technologies</p>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Data Centers">
+                    <div class="slide-content">
+                      <h2 class="text-2xl font-bold mb-2">Global Infrastructure</h2>
+                      <p>Learn about the massive data centers powering the cloud</p>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cloud Security">
+                    <div class="slide-content">
+                      <h2 class="text-2xl font-bold mb-2">Cloud Security</h2>
+                      <p>Discover best practices for securing your cloud environments</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="slider-btn prev">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <div class="slider-nav">
+                  <div class="slider-dot active"></div>
+                  <div class="slider-dot"></div>
+                  <div class="slider-dot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section py-12 md:py-24 lg:py-32">
+        <div class="container px-4 md:px-6">
+          <div class="flex flex-col items-center justify-center space-y-4 text-center">
+            <div class="space-y-2">
+              <h2 class="text-3xl font-bold tracking-tighter md:text-4xl">Cloud Service Providers</h2>
+              <p class="max-w-[700px] text-muted-foreground md:text-xl">
+                Comprehensive learning materials for all major cloud platforms
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+            <!-- AWS -->
+            <div class="card cloud-provider-card">
+              <div class="card-content p-6">
+                <div class="flex flex-col items-center text-center space-y-4">
+                  <div class="mb-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS logo" class="provider-logo">
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold">AWS</h3>
+                    <p class="text-sm text-muted-foreground mt-1">Amazon Web Services - The most comprehensive cloud platform</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-6 pt-0">
+                <a href="providers/aws.html" class="w-full">
+                  <button class="btn btn-outline w-full">
+                    Learn More
+                    <i class="fa-solid fa-arrow-right ml-1"></i>
+                  </button>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Azure -->
+            <div class="card cloud-provider-card">
+              <div class="card-content p-6">
+                <div class="flex flex-col items-center text-center space-y-4">
+                  <div class="mb-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" alt="Azure logo" class="provider-logo">
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold">Azure</h3>
+                    <p class="text-sm text-muted-foreground mt-1">Microsoft Azure - Integrated cloud services for enterprise</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-6 pt-0">
+                <a href="providers/azure.html" class="w-full">
+                  <button class="btn btn-outline w-full">
+                    Learn More
+                    <i class="fa-solid fa-arrow-right ml-1"></i>
+                  </button>
+                </a>
+              </div>
+            </div>
+            
+            <!-- GCP -->
+            <div class="card cloud-provider-card">
+              <div class="card-content p-6">
+                <div class="flex flex-col items-center text-center space-y-4">
+                  <div class="mb-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="GCP logo" class="provider-logo">
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold">GCP</h3>
+                    <p class="text-sm text-muted-foreground mt-1">Google Cloud Platform - Build on the same infrastructure as Google</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-6 pt-0">
+                <a href="providers/gcp.html" class="w-full">
+                  <button class="btn btn-outline w-full">
+                    Learn More
+                    <i class="fa-solid fa-arrow-right ml-1"></i>
+                  </button>
+                </a>
+              </div>
+            </div>
+            
+            <!-- IBM Cloud -->
+            <div class="card cloud-provider-card">
+              <div class="card-content p-6">
+                <div class="flex flex-col items-center text-center space-y-4">
+                  <div class="mb-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Cloud logo" class="provider-logo">
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold">IBM Cloud</h3>
+                    <p class="text-sm text-muted-foreground mt-1">Enterprise-grade cloud solutions with focus on security</p>
+                  </div>
+                </div>
+              </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/ibm.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Oracle Cloud -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle Cloud logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">Oracle Cloud</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Oracle Cloud Infrastructure for enterprise applications</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/oci.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Alibaba Cloud -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://img.alicdn.com/imgextra/i4/O1CN01cMRNZN1Q3rqeuFGkP_!!6000000001921-55-tps-296-37.svg" alt="Alibaba Cloud logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">Alibaba Cloud</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Leading cloud provider in Asia-Pacific region</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/alibaba.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Salesforce -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">Salesforce</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Cloud-based software focused on customer relationship management</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/salesforce.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- DigitalOcean -->
+          <div class="card cloud-provider-card">
+            <div class="card-content p-6">
+              <div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/DigitalOcean_logo.svg" alt="DigitalOcean logo" class="provider-logo">
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">DigitalOcean</h3>
+                  <p class="text-sm text-muted-foreground mt-1">Simple cloud platform for developers and small businesses</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="providers/digitalocean.html" class="w-full">
+                <button class="btn btn-outline w-full">
+                  Learn More
+                  <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center mt-8">
+          <a href="providers.html">
+            <button class="btn btn-primary">View All Providers</button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-gradient-purple py-12 md:py-24 lg:py-32">
+      <div class="container px-4 md:px-6">
+        <div class="flex flex-col items-center justify-center space-y-4 text-center">
+          <div class="space-y-2">
+            <h2 class="text-3xl font-bold tracking-tighter md:text-4xl text-white">Featured Learning Paths</h2>
+            <p class="max-w-[700px] md:text-xl text-white opacity-90">
+              Start your cloud journey with our curated learning paths
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <!-- Cloud Fundamentals -->
+          <div class="card course-card">
+            <div class="card-content p-6 course-card-content">
+              <div class="space-y-4">
+                <div class="space-y-2">
+                  <div class="flex justify-between items-start">
+                    <span class="badge badge-primary">Beginner</span>
+                  </div>
+                  <h3 class="text-xl font-bold">Cloud Fundamentals</h3>
+                  <p class="text-sm text-muted-foreground">Learn the core concepts of cloud computing applicable to all providers</p>
+                </div>
+                <div class="flex items-center text-sm text-muted-foreground">
+                  <i class="fa-regular fa-clock mr-1"></i>
+                  <span>4 weeks</span>
+                  <i class="fa-solid fa-graduation-cap ml-4 mr-1"></i>
+                  <span>Certificate</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="courses/cloud-fundamentals.html" class="w-full">
+                <button class="btn btn-primary w-full">Start Learning</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- AWS Solutions Architect -->
+          <div class="card course-card">
+            <div class="card-content p-6 course-card-content">
+              <div class="space-y-4">
+                <div class="space-y-2">
+                  <div class="flex justify-between items-start">
+                    <span class="badge badge-accent">Intermediate</span>
+                  </div>
+                  <h3 class="text-xl font-bold">AWS Solutions Architect</h3>
+                  <p class="text-sm text-muted-foreground">Comprehensive path to master AWS architecture and services</p>
+                </div>
+                <div class="flex items-center text-sm text-muted-foreground">
+                  <i class="fa-regular fa-clock mr-1"></i>
+                  <span>12 weeks</span>
+                  <i class="fa-solid fa-graduation-cap ml-4 mr-1"></i>
+                  <span>Certificate</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="courses/aws-solutions-architect.html" class="w-full">
+                <button class="btn btn-primary w-full">Start Learning</button>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Multi-Cloud Strategy -->
+          <div class="card course-card">
+            <div class="card-content p-6 course-card-content">
+              <div class="space-y-4">
+                <div class="space-y-2">
+                  <div class="flex justify-between items-start">
+                    <span class="badge badge-secondary">Advanced</span>
+                  </div>
+                  <h3 class="text-xl font-bold">Multi-Cloud Strategy</h3>
+                  <p class="text-sm text-muted-foreground">Learn how to implement and manage multi-cloud environments</p>
+                </div>
+                <div class="flex items-center text-sm text-muted-foreground">
+                  <i class="fa-regular fa-clock mr-1"></i>
+                  <span>8 weeks</span>
+                  <i class="fa-solid fa-graduation-cap ml-4 mr-1"></i>
+                  <span>Certificate</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer p-6 pt-0">
+              <a href="courses/multi-cloud-strategy.html" class="w-full">
+                <button class="btn btn-primary w-full">Start Learning</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section py-12 md:py-24 lg:py-32">
+      <div class="container px-4 md:px-6">
+        <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+          <div class="space-y-4">
+            <div class="inline-block rounded-lg bg-accent px-3 py-1 text-sm text-white">Why Choose Us</div>
+            <h2 class="text-3xl font-bold tracking-tighter md:text-4xl">
+              Comprehensive Cloud Learning Experience
+            </h2>
+            <ul class="grid gap-2">
+              <li class="flex items-center gap-2">
+                <div class="rounded-full bg-primary p-1 text-primary-foreground">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span>Coverage of all major cloud service providers</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="rounded-full bg-primary p-1 text-primary-foreground">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span>From basic to advanced learning materials</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="rounded-full bg-primary p-1 text-primary-foreground">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span>Detailed service documentation for each provider</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="rounded-full bg-primary p-1 text-primary-foreground">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span>Practical tutorials and hands-on exercises</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="rounded-full bg-primary p-1 text-primary-foreground">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span>Regularly updated content to match latest services</span>
+              </li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="relative w-full h-[300px] md:h-[400px] bg-gradient-blue rounded-lg flex items-center justify-center overflow-hidden">
+              <i class="fa-solid fa-book-open fa-5x text-white relative z-10"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container flex flex-col gap-6 py-8 md:py-12 px-4 md:px-6">
+      <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+        <a href="index.html" class="flex items-center gap-2 font-semibold">
+          <i class="fa-solid fa-cloud text-primary"></i>
+          <span>CloudLearn</span>
+        </a>
+        <nav class="flex gap-4 md:gap-6 flex-wrap justify-center">
+          <a href="providers.html" class="nav-link">Providers</a>
+          <a href="courses.html" class="nav-link">Courses</a>
+          <a href="resources.html" class="nav-link">Resources</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+      </div>
+      <div class="text-center md:text-left text-sm text-muted-foreground">
+        © <span id="current-year"></span> CloudLearn. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Sign In Modal -->
+<div id="sign-in-modal" class="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 class="modal-title">Sign In</h3>
+      <button class="modal-close" id="close-modal">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form id="sign-in-form">
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
+        </div>
+        <div class="flex justify-between items-center mb-4">
+          <div>
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me" class="text-sm">Remember me</label>
+          </div>
+          <a href="#" class="text-sm text-primary">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary w-full">Sign In</button>
+      </form>
+      <div class="mt-4 text-center">
+        <p class="text-sm text-muted-foreground">Don't have an account? <a href="#" class="text-primary">Sign up</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
